@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/ArtPilar3.unity
     guid: d2eb7a2b742b0ff458936d7404f5ecb1
   - enabled: 0
-    path: Assets/Scenes/ArtPilar3.unity
-    guid: d2eb7a2b742b0ff458936d7404f5ecb1
-  - enabled: 0
     path: Assets/Scenes/Fashion1.unity
     guid: 34cdd6e7b4b4263479b872e2b8928ec7
   - enabled: 0
@@ -29,12 +26,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Fashion3.unity
     guid: 8d66dcce8bb8bb140891188dece26ec1
-  - enabled: 0
-    path: Assets/Scenes/Music3.unity
-    guid: ea99ab439312f424197ae06b2cdf1047
-  - enabled: 0
-    path: Assets/Scenes/Music3.unity
-    guid: ea99ab439312f424197ae06b2cdf1047
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
@@ -48,9 +39,21 @@ EditorBuildSettings:
     path: Assets/Scenes/HOF 0802.unity
     guid: d3b8d3f293b849e4c9210fe27643eea6
   - enabled: 0
+    path: Assets/Scenes/ArtPilar2 B1.unity
+    guid: 90ca8d9173105154b863e866c75e7b8f
+  - enabled: 0
     path: Assets/Scenes/Music 2.unity
     guid: bc8cac7d88daf604596f2f8aad62b966
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Music1.unity
     guid: b5850c173e0470e45b8d2eae6c2fafbb
+  - enabled: 0
+    path: Assets/Scenes/Selfie.unity
+    guid: ed09dd6c8c3a7aa488dc5add9c268847
+  - enabled: 1
+    path: Assets/Scenes/Music3.unity
+    guid: ea99ab439312f424197ae06b2cdf1047
+  - enabled: 0
+    path: Assets/Scenes/Music1 1.unity
+    guid: 76dc63251153ba049a9f87bd069c147c
   m_configObjects: {}

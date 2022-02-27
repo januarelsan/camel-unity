@@ -6,6 +6,9 @@ TagManager:
   tags:
   - border
   - Manager
+  - limit
+  - miss
+  - UrlManager
   layers:
   - Default
   - TransparentFX

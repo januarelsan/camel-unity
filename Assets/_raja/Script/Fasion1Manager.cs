@@ -11,7 +11,8 @@ public class Fasion1Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+                objectss.position = new Vector3(-0.01f, objectss.position.y, objectss.position.z);
+
     }
 
     // Update is called once per frame
@@ -33,23 +34,23 @@ public class Fasion1Manager : MonoBehaviour
         switch (counter)
         {
             case 0:
-                objectss.position = new Vector3(-0.024f, objectss.position.y, objectss.position.z);
+                objectss.position = new Vector3(-0.01f, objectss.position.y, objectss.position.z);
                 prev.SetActive(false);
                 next.SetActive(true);
 
                 break;
             case 1:
-                objectss.position = new Vector3(-1.524f, objectss.position.y, objectss.position.z);
+                objectss.position = new Vector3(-2.031f, objectss.position.y, objectss.position.z);
                 prev.SetActive(true);
                 next.SetActive(true);
                 break;
             case 2:
-                objectss.position = new Vector3(-3.024f, objectss.position.y, objectss.position.z);
+                objectss.position = new Vector3(-4.054f, objectss.position.y, objectss.position.z);
                 prev.SetActive(true);
                 next.SetActive(true);
                 break;
             case 3:
-                objectss.position = new Vector3(-4.524f, objectss.position.y, objectss.position.z);
+                objectss.position = new Vector3(-6.067f, objectss.position.y, objectss.position.z);
                 prev.SetActive(true);
                 next.SetActive(false);
                 break;

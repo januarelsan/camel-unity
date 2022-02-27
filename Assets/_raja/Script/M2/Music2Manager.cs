@@ -20,11 +20,13 @@ public class Music2Manager : MonoBehaviour
     public AudioSource source;
     public bool isAnswer;
     [SerializeField] public AudioClip clip;
+    public bool allowPlay;
+
     void Start()
     {
         Color colors = Color.white;
         colors.a = 0f;
-        imageResult.color = colors;
+        //imageResult.color = colors;
         btnStart.gameObject.SetActive(true);
         canvasAnswer.interactable = false;
         imageQuestion.sprite = questionDefault;
@@ -75,7 +77,10 @@ public class Music2Manager : MonoBehaviour
         //source.Play();
         source.clip = clip;
         source.Play();
-            StartCoroutine("PlayQuestionSequence");
+        allowPlay = true;
+
+        StartCoroutine("PlayQuestionSequence");
+        Invoke("StopAllow", 19f);
     }
     public void StopQuestion()
     {
@@ -90,15 +95,62 @@ public class Music2Manager : MonoBehaviour
         StopCoroutine("PlayQuestionSequence");
     }
 
-    public IEnumerator PlayQuestionSequence() {
-        if (curIndex >= listQuestion.Count) {
-            curIndex = 0;
-        }
-        imageQuestion.sprite = listQuestion[curIndex];
-        curIndex++;
-        yield return new WaitForSeconds(delay);
-        StartCoroutine("PlayQuestionSequence");
+    public void StopAllow() {
+        allowPlay = false;
     }
+
+
+    public IEnumerator PlayQuestionSequence() {
+        //Debug.Log("start");
+        if (allowPlay == true && source.isPlaying == true)
+        {
+            int rands = Randoms(curIndex);
+            curIndex = rands;
+            if (curIndex >= listQuestion.Count)
+            {
+                curIndex = 0;
+            }
+
+            imageQuestion.sprite = listQuestion[rands];
+            //curIndex++;
+            //Debug.Log(rands);
+            yield return new WaitForSeconds(delay);
+            StartCoroutine("PlayQuestionSequence");
+        }
+        else if(allowPlay == false && source.isPlaying == true) { 
+            imageQuestion.sprite = questionDefault;
+            //btnStart.gameObject.SetActive(true);
+            Invoke("CountingTrue", 1.5f);
+
+        }
+        else{
+
+
+        }
+    }
+    public void EndSeq()
+    {
+        ApiManagerR managerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();
+        managerR.DirectLinkparam();
+
+    }
+    public void CountingTrue() { 
+            btnStart.gameObject.SetActive(true);
+
+    }
+    public int Randoms(int curidx) {
+        int storeValue;
+        int rands = Random.Range(0, listQuestion.Count);
+        if (curidx == rands)
+        {
+            storeValue = Randoms(curidx);
+        }
+        else {
+            storeValue = rands;
+        }
+        return storeValue;
+    }
+
 
     public void QuestionAnswer(int i) {
         if (i == 3)
@@ -106,19 +158,19 @@ public class Music2Manager : MonoBehaviour
             Debug.Log("true");
             Color colors = Color.green;
             colors.a = 1f;
-            imageResult.color = colors;
+            //imageResult.color = colors;
         }
         else {
             Debug.Log("true");
             Color colors = Color.red;
             colors.a = 1f;
-            imageResult.color = colors;
+            //imageResult.color = colors;
 
         }
         isAnswer = true;
         canvasAnswer.interactable = false;
         StopQuestion();
-
+        EndSeq();
     }
 
 

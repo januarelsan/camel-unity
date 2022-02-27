@@ -17,12 +17,12 @@ public class CameraDetection : MonoBehaviour
     {
         cam = GetComponent<Camera>();
         pintu.mainTexture = pintuTextureDefault;
-        pintu.SetTexture("_EmissionMap", pintuTextureDefault);
+        //pintu.SetTexture("_EmissionMap", pintuTextureDefault);
     }
     public void OnDestroy()
     {
         pintu.mainTexture = pintuTextureDefault;
-        pintu.SetTexture("_EmissionMap", pintuTextureDefault);
+        //pintu.SetTexture("_EmissionMap", pintuTextureDefault);
     }
     // Update is called once per frame
     void Update()
@@ -45,7 +45,7 @@ public class CameraDetection : MonoBehaviour
             {
                 pintu.mainTexture = pintuTexture;
                              
-                pintu.SetTexture("_EmissionMap", pintuTexture);
+                //pintu.SetTexture("_EmissionMap", pintuTexture);
                 isFinish = true;
             }
         }

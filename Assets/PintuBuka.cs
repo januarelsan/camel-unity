@@ -7,8 +7,8 @@ public class PintuBuka : MonoBehaviour
     [SerializeField] GameObject door;
     [SerializeField] Animator anim;
     [SerializeField] CameraDetection objDetection;
-    [SerializeField] Material pintuAnjing;
-    [SerializeField] Texture2D pintuKebukaBangsat;
+    [SerializeField] Material doorMat;
+    [SerializeField] Texture2D doorTex;
     bool isEnable;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,6 @@ public class PintuBuka : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (objDetection.isFinish)
@@ -28,7 +27,7 @@ public class PintuBuka : MonoBehaviour
     {
         if (isEnable)
         {
-            pintuAnjing.mainTexture = pintuKebukaBangsat;
+            doorMat.mainTexture = doorTex;
             anim.SetTrigger("pintu");
             door.SetActive(true);
         }
