@@ -29,7 +29,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
+    path: Assets/_Main/Scenes/Login.unity
+    guid: 8367be2ed4c06854b94872ff67759a2a
+  - enabled: 1
     path: Assets/Scenes/New Scene.unity
     guid: d460384b6af64cc43a2282eb4a604282
   - enabled: 0
@@ -50,7 +53,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Selfie.unity
     guid: ed09dd6c8c3a7aa488dc5add9c268847
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Music3.unity
     guid: ea99ab439312f424197ae06b2cdf1047
   - enabled: 0
