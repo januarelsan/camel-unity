@@ -324,7 +324,8 @@ public class CamelAuthController : MonoBehaviour
                 {
                     Debug.Log(item.identity_no);
                     PlayerPrefController.Instance.SetIdentityNumber(item.identity_no);
-                    LoginController.Instance.ToLobbyPage();
+                    SceneManager.LoadScene("New Scene");
+                    // LoginController.Instance.ToLobbyPage();
                 }
 
             }

@@ -37,8 +37,8 @@ public class LobbyHomeController : MonoBehaviour
     
 
     public void StartGame(){
-        SceneManager.LoadScene("New Scene");
-        // LinkItemController.Instance.CallGetLinkAPI("1");
+        // SceneManager.LoadScene("New Scene");
+        LinkItemController.Instance.CallGetLinkAPI("19");
     }    
 
     public void CallLobbyJoinedUserListAPI(){

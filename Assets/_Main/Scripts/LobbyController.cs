@@ -126,7 +126,7 @@ public class LobbyController : Singleton<LobbyController>
     }
 
     public void CallLobbyJoinAPI(string code){
-        List<string> parameters = new List<string>(){code,PlayerPrefController.Instance.GetIdentityNumber()};
+        List<string> parameters = new List<string>(){code,"7306081201950010"};
         APIController.Instance.Get("lobby/join", CallLobbyJoinAPIResponse, parameters);        
     }
 
