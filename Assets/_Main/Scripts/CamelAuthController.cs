@@ -248,7 +248,7 @@ public class CamelAuthController : MonoBehaviour
                     if (item.status == "success")
                     {
                         Debug.Log("Camel Verify Success");
-                        CallIdentityCreateAPI(identityNoFieldVerify.text);
+                        CallIdentityCreateAPI(identityNoFieldVerify.text,fullnameFieldVerify.text);
                         
                     }
                     else
@@ -296,11 +296,11 @@ public class CamelAuthController : MonoBehaviour
 
 
 
-    public void CallIdentityCreateAPI(string identityNumber)
+    public void CallIdentityCreateAPI(string identityNumber,string fullname)
     {
 
         Dictionary<string, string> parameters = new Dictionary<string, string>();
-
+        parameters.Add("fullname", fullname);
         parameters.Add("identity_no", identityNumber);        
         APIController.Instance.PostWithFormData("identity/create", CallIndentityCreateAPIResponse, parameters);
     }
