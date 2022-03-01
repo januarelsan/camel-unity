@@ -29,15 +29,24 @@ public class ApiManagerR : MonoBehaviour
         if (textResult != null) {
             textResult.text = "";
         }
-        
-        StartCoroutine("GetLink");
 
+        //StartCoroutine("GetLink");
+        StartGame();
 
 
         //Application.OpenURL(url);
-    
+
     }
+    public void StartGame()
+    {
+        // SceneManager.LoadScene("New Scene");
+        LinkItemController.Instance.CallGetLinkAPI(gameID);
+    }
+
+
     public IEnumerator GetLink() {
+
+
         url = "januarelsan.com/api/link/get/";
         string uri = url + gameID;
         Debug.Log(uri);

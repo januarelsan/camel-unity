@@ -113,7 +113,7 @@ public class Music2Manager : MonoBehaviour
 
             imageQuestion.sprite = listQuestion[rands];
             //curIndex++;
-            //Debug.Log(rands);
+            Debug.Log(rands);
             yield return new WaitForSeconds(delay);
             StartCoroutine("PlayQuestionSequence");
         }
@@ -140,14 +140,20 @@ public class Music2Manager : MonoBehaviour
     }
     public int Randoms(int curidx) {
         int storeValue;
-        int rands = Random.Range(0, listQuestion.Count);
-        if (curidx == rands)
-        {
-            storeValue = Randoms(curidx);
+        //int rands = Random.Range(0, listQuestion.Count);
+        //int rands = 0;
+        //if (curidx == rands)
+        //{
+        //    storeValue = Randoms(curidx);
+        //}
+        //else {
+        //    storeValue = rands;
+        //}
+        curidx++;
+        if (curidx >= listQuestion.Count) {
+            curidx = 0;
         }
-        else {
-            storeValue = rands;
-        }
+        storeValue = curidx;
         return storeValue;
     }
 

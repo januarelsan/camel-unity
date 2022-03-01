@@ -18,6 +18,7 @@ public class Selfie : MonoBehaviour
     public CanvasGroup resultPanel;
     public CanvasGroup lastResultPanel;
     public Image splash;
+    public Image camResult;
     public List<Sprite> frames;
     // Start is called before the first frame update
     void Start()
@@ -84,9 +85,11 @@ public class Selfie : MonoBehaviour
         Sprite sprite = Sprite.Create(tex2D, new Rect(0, 0, tex2D.width, tex2D.height), new Vector2(tex2D.width / 2, tex2D.height / 2));
 
         Sprite spriteGS = Sprite.Create(tex2D2, new Rect(0, 0, tex2D2.width, tex2D2.height), new Vector2(tex2D2.width / 2, tex2D2.height / 2));
+        
         zapparCamera.GetComponent<ZapparCamera>().ToggleActiveCamera(true);
         result.sprite = sprite;
         result2.sprite = spriteGS;
+        camResult.sprite = spriteGS;
         //result.preserveAspect = true;
         capturingPanel.interactable = false;
         capturingPanel.blocksRaycasts = false;

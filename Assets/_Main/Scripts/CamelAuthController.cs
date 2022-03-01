@@ -220,10 +220,11 @@ public class CamelAuthController : MonoBehaviour
         Dictionary<string, string> parameters = new Dictionary<string, string>();
 
         string birtdayString = yearFieldVerify.text + "-" + monthFieldVerify.text + "-" + dayFieldVerify.text;
-
+        Debug.Log(fullnameFieldVerify.text);
         parameters.Add("fullname", fullnameFieldVerify.text);
         parameters.Add("identity_no", identityNoFieldVerify.text);
         parameters.Add("birthday", birtdayString);
+        Debug.Log(parameters.ToString());
 
         PostWithFormData("verify-identity", CallVerifyAPIResponse, parameters);
     }

@@ -65,6 +65,7 @@ public class APIController : Singleton<APIController>
             foreach (KeyValuePair<string, string> kvp in parameters)
             {            
                 formData.AddField(kvp.Key, kvp.Value);
+                Debug.Log(kvp.Value.ToString());
             }
         }
 
@@ -76,7 +77,7 @@ public class APIController : Singleton<APIController>
             .AddHeader("Accept", "application/json")
             .AddHeader("Authorization", "Bearer " + token)
             .Post(RequestBody.From(formData));
-
+        
         Client http = new Client();
         LoadingController.Instance.SetActive(true);
         yield return http.Send(request);
