@@ -168,7 +168,7 @@ namespace WebGLSupport
             else
             {
                 var x = (int)(rect.x);
-                var y = (int)(Screen.height - (rect.y));
+                var y = (int)(Screen.height + 100 + (rect.y));
                 return new RectInt(x, y, (int)rect.width, (int)1);
             }
         }

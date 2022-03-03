@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6bdbb891dcab0a748be805d4d7edd867
+guid: ad2392a25b484a7429dbc80fe6061756
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,8 +9,11 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Camel
-  fallbackFontReferences: []
+  - Gotham
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 87c02612a732e7a4cbcdbd7e4cd6fd4a, type: 3}
+  - {fileID: 12800000, guid: 9a53a85d596910c44a66122d002e6d4f, type: 3}
+  - {fileID: 12800000, guid: f5804c6e20e5e2a40abd6e1113524ce3, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

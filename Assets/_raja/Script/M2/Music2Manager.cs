@@ -21,6 +21,7 @@ public class Music2Manager : MonoBehaviour
     public bool isAnswer;
     [SerializeField] public AudioClip clip;
     public bool allowPlay;
+    public bool playAudios;
 
     void Start()
     {
@@ -30,6 +31,10 @@ public class Music2Manager : MonoBehaviour
         btnStart.gameObject.SetActive(true);
         canvasAnswer.interactable = false;
         imageQuestion.sprite = questionDefault;
+        if (playAudios == false) {
+
+            PlayBTN();
+        }
     }
 
     // Update is called once per frame
@@ -75,8 +80,12 @@ public class Music2Manager : MonoBehaviour
     }
     public void PlayQuestion() {
         //source.Play();
-        source.clip = clip;
-        source.Play();
+
+        if (playAudios) {
+            source.clip = clip;
+            source.Play();
+        }
+        
         allowPlay = true;
 
         StartCoroutine("PlayQuestionSequence");
@@ -91,7 +100,12 @@ public class Music2Manager : MonoBehaviour
             canvasAnswer.interactable = false;
 
         }
-        source.Stop();
+
+        if (playAudios)
+        {
+            source.Stop();
+        }
+
         StopCoroutine("PlayQuestionSequence");
     }
 
@@ -102,30 +116,76 @@ public class Music2Manager : MonoBehaviour
 
     public IEnumerator PlayQuestionSequence() {
         //Debug.Log("start");
-        if (allowPlay == true && source.isPlaying == true)
+        //if (allowPlay == true && source.isPlaying == true)
+        //{
+        //    int rands = Randoms(curIndex);
+        //    curIndex = rands;
+        //    if (curIndex >= listQuestion.Count)
+        //    {
+        //        curIndex = 0;
+        //    }
+
+        //    imageQuestion.sprite = listQuestion[rands];
+        //    //curIndex++;
+        //    Debug.Log(rands);
+        //    yield return new WaitForSeconds(delay);
+        //    StartCoroutine("PlayQuestionSequence");
+        //}
+        //else if(allowPlay == false && source.isPlaying == true) { 
+        //    imageQuestion.sprite = questionDefault;
+        //    //btnStart.gameObject.SetActive(true);
+        //    Invoke("CountingTrue", 1.5f);
+
+        //}
+        if (playAudios)
         {
-            int rands = Randoms(curIndex);
-            curIndex = rands;
-            if (curIndex >= listQuestion.Count)
+            if (allowPlay == true && source.isPlaying == true)
             {
-                curIndex = 0;
+                int rands = Randoms(curIndex);
+                curIndex = rands;
+                if (curIndex >= listQuestion.Count)
+                {
+                    curIndex = 0;
+                }
+
+                imageQuestion.sprite = listQuestion[rands];
+                //curIndex++;
+                Debug.Log(rands);
+                yield return new WaitForSeconds(delay);
+                StartCoroutine("PlayQuestionSequence");
             }
+            else if (allowPlay == false && source.isPlaying == true)
+            {
+                imageQuestion.sprite = questionDefault;
+                //btnStart.gameObject.SetActive(true);
+                Invoke("CountingTrue", 1.5f);
 
-            imageQuestion.sprite = listQuestion[rands];
-            //curIndex++;
-            Debug.Log(rands);
-            yield return new WaitForSeconds(delay);
-            StartCoroutine("PlayQuestionSequence");
+            }
         }
-        else if(allowPlay == false && source.isPlaying == true) { 
-            imageQuestion.sprite = questionDefault;
-            //btnStart.gameObject.SetActive(true);
-            Invoke("CountingTrue", 1.5f);
+        else {
 
-        }
-        else{
+            if (allowPlay == true)
+            {
+                int rands = Randoms(curIndex);
+                curIndex = rands;
+                if (curIndex >= listQuestion.Count)
+                {
+                    curIndex = 0;
+                }
 
+                imageQuestion.sprite = listQuestion[rands];
+                //curIndex++;
+                Debug.Log(rands);
+                yield return new WaitForSeconds(delay);
+                StartCoroutine("PlayQuestionSequence");
+            }
+            else if (allowPlay == false && source.isPlaying == true)
+            {
+                imageQuestion.sprite = questionDefault;
+                //btnStart.gameObject.SetActive(true);
+                Invoke("CountingTrue", 1.5f);
 
+            }
         }
     }
     public void EndSeq()

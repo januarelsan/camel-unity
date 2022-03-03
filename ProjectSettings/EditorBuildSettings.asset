@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
+    path: Assets/Scenes/New Scene.unity
+    guid: d460384b6af64cc43a2282eb4a604282
+  - enabled: 0
     path: Assets/Scenes/ArtPilar1.unity
     guid: fc46764f2d99b7849880a347a2bc976d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ArtPilar2.unity
     guid: f30d047eeed11304ebbed1d9ca0edf80
   - enabled: 0
@@ -21,41 +24,50 @@ EditorBuildSettings:
     path: Assets/Scenes/Fashion2.unity
     guid: 4b3ab37c4eb3e9c47bbbbbf61bf5c526
   - enabled: 0
-    path: Assets/Scenes/Fashion1 1.unity
-    guid: ad953e9741e43384aa3a2fc305294798
-  - enabled: 0
     path: Assets/Scenes/Fashion3.unity
     guid: 8d66dcce8bb8bb140891188dece26ec1
   - enabled: 0
+    path: Assets/Scenes/Music1.unity
+    guid: b5850c173e0470e45b8d2eae6c2fafbb
+  - enabled: 0
+    path: Assets/Scenes/Music 2.unity
+    guid: bc8cac7d88daf604596f2f8aad62b966
+  - enabled: 0
+    path: Assets/Scenes/Music3.unity
+    guid: ea99ab439312f424197ae06b2cdf1047
+  - enabled: 0
+    path: Assets/Scenes/Fashion1 1.unity
+    guid: ad953e9741e43384aa3a2fc305294798
+  - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/New Scene.unity
-    guid: d460384b6af64cc43a2282eb4a604282
   - enabled: 0
     path: Assets/Scenes/Fashion1 2.unity
     guid: 424500b76a3bdb245863f54f7ffae296
   - enabled: 0
     path: Assets/Scenes/HOF 0802.unity
     guid: d3b8d3f293b849e4c9210fe27643eea6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ArtPilar2 B1.unity
     guid: 90ca8d9173105154b863e866c75e7b8f
-  - enabled: 0
-    path: Assets/Scenes/Music 2.unity
-    guid: bc8cac7d88daf604596f2f8aad62b966
-  - enabled: 0
-    path: Assets/Scenes/Music1.unity
-    guid: b5850c173e0470e45b8d2eae6c2fafbb
   - enabled: 0
     path: Assets/Scenes/Selfie.unity
     guid: ed09dd6c8c3a7aa488dc5add9c268847
   - enabled: 0
-    path: Assets/Scenes/Music3.unity
-    guid: ea99ab439312f424197ae06b2cdf1047
-  - enabled: 0
     path: Assets/Scenes/Music1 1.unity
     guid: 76dc63251153ba049a9f87bd069c147c
+  - enabled: 0
+    path: Assets/Scenes/Q1.unity
+    guid: dce17f2e6802ff0478371228b26f2479
+  - enabled: 0
+    path: Assets/Scenes/Fashion2 B1.unity
+    guid: 8c8376dbf2828324083d419a2379f04b
+  - enabled: 0
+    path: Assets/Scenes/ArtPilar2 Q3.unity
+    guid: debeb9678e6c675429d5ff853d33cba2
+  - enabled: 0
+    path: Assets/Scenes/Q4.unity
+    guid: 778ba10bc1067af4280ad9bdd4717724
   - enabled: 0
     path: Assets/Scenes/Music 2 -2.unity
     guid: 0d77341865574114898c46996ce8cbdc

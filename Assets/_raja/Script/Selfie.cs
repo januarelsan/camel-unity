@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Zappar;
 using DG.Tweening;
 
+
 public class Selfie : MonoBehaviour
 {
     public ZapparCameraBackground zapparCameraBG;
@@ -38,6 +39,7 @@ public class Selfie : MonoBehaviour
         lastResultPanel.alpha = 0;
         lastResultPanel.interactable = false;
         lastResultPanel.blocksRaycasts = false;
+        //Debug.Log(zapparCameraBG.)
         //capturingPanel.alpha = 1;
         //capturingPanel.interactable = true;
         //capturingPanel.blocksRaycasts = true;
