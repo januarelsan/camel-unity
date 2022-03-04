@@ -87,7 +87,46 @@ public class M2ShowManager : MonoBehaviour
 
             }
         }
+        else
+        {
+            foreach (GameObject zpr in zapparImageTrackingTargets)
+            {
+
+                zpr.SetActive(true);
+
+            }
+        }
 
 
     }
+    public void Debuggings(string stat)
+    {
+        Debug.Log(stat);
+        if (stat == "Yellow 2" || stat == "Purple")
+        {
+            zapparImageTrackingTargets[0].SetActive(false);
+            zapparImageTrackingTargets[1].SetActive(true);
+
+        }
+        else
+        {
+            zapparImageTrackingTargets[0].SetActive(true);
+            zapparImageTrackingTargets[1].SetActive(false);
+
+        }
+        status = true;
+
+    }
+
+    public void EndShow()
+    {
+
+        foreach (GameObject zpr in zapparImageTrackingTargets)
+        {
+
+            zpr.SetActive(true);
+
+        }
+    }
+
 }

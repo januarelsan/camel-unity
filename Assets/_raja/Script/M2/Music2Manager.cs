@@ -31,9 +31,10 @@ public class Music2Manager : MonoBehaviour
         btnStart.gameObject.SetActive(true);
         canvasAnswer.interactable = false;
         imageQuestion.sprite = questionDefault;
-        if (playAudios == false) {
 
-            PlayBTN();
+        if (playAudios == false) {
+            btnStart.gameObject.SetActive(false);
+            //PlayBTN();
         }
     }
 
@@ -51,6 +52,9 @@ public class Music2Manager : MonoBehaviour
         if (isAnswer == false) {
             canvasAnswer.interactable = true;
 
+        }
+        if (playAudios == false) {
+            curIndex = listQuestion.Count-1;
         }
         PlayQuestion();
 
@@ -89,24 +93,34 @@ public class Music2Manager : MonoBehaviour
         allowPlay = true;
 
         StartCoroutine("PlayQuestionSequence");
-        Invoke("StopAllow", 19f);
+        if (playAudios) {
+            Invoke("StopAllow", 19f);
+        }
+        
     }
     public void StopQuestion()
     {
-        if (isAnswer == false)
+        if (playAudios == true)
         {
-            imageQuestion.sprite = questionDefault;
-            btnStart.gameObject.SetActive(true);
-            canvasAnswer.interactable = false;
+            if (isAnswer == false)
+            {
+                imageQuestion.sprite = questionDefault;
+                btnStart.gameObject.SetActive(true);
+                canvasAnswer.interactable = false;
 
+            }
+
+            if (playAudios)
+            {
+                source.Stop();
+            }
+
+            StopCoroutine("PlayQuestionSequence");
         }
-
-        if (playAudios)
-        {
-            source.Stop();
+        else { 
+        
+        
         }
-
-        StopCoroutine("PlayQuestionSequence");
     }
 
     public void StopAllow() {
@@ -163,21 +177,22 @@ public class Music2Manager : MonoBehaviour
             }
         }
         else {
+            int rands = Randoms(curIndex);
+            curIndex = rands;
+            if (curIndex >= listQuestion.Count)
+            {
+                curIndex = 0;
+            }
+
+            imageQuestion.sprite = listQuestion[rands];
+            //curIndex++;
+            Debug.Log(rands);
+            yield return new WaitForSeconds(delay);
+            StartCoroutine("PlayQuestionSequence");
 
             if (allowPlay == true)
             {
-                int rands = Randoms(curIndex);
-                curIndex = rands;
-                if (curIndex >= listQuestion.Count)
-                {
-                    curIndex = 0;
-                }
-
-                imageQuestion.sprite = listQuestion[rands];
-                //curIndex++;
-                Debug.Log(rands);
-                yield return new WaitForSeconds(delay);
-                StartCoroutine("PlayQuestionSequence");
+                
             }
             else if (allowPlay == false && source.isPlaying == true)
             {

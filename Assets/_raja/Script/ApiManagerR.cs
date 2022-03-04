@@ -51,6 +51,8 @@ public class ApiManagerR : MonoBehaviour
         // SceneManager.LoadScene("New Scene");
          List<string> parameters = new List<string>();                                 
         parameters.Add(gameID);
+        parameters.Add(lobbyCode);
+        parameters.Add(id);
         LinkItemController.Instance.CallGetLinkAPI(parameters);
         
     }

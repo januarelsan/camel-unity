@@ -285,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207031, y: 11453.009}
+  m_AnchoredPosition: {x: 0.00012207031, y: 10876}
   m_SizeDelta: {x: 487.8796, y: 413.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &7148163
@@ -3962,7 +3962,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207031, y: 11634}
+  m_AnchoredPosition: {x: 0.00012207031, y: 11192.001}
   m_SizeDelta: {x: 487.8796, y: 413.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &543216256
@@ -5109,7 +5109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207031, y: 12285}
+  m_AnchoredPosition: {x: 0.00012207031, y: 11843.001}
   m_SizeDelta: {x: 487.8796, y: 413.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &802269275
@@ -6560,7 +6560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207031, y: 12121}
+  m_AnchoredPosition: {x: 0.00012207031, y: 11679.001}
   m_SizeDelta: {x: 487.8796, y: 413.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1028283309
@@ -8374,8 +8374,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.027518226, y: 0.085}
   m_AnchorMax: {x: 0.97369635, y: 0.9693835}
-  m_AnchoredPosition: {x: 4.3049927, y: -17.999992}
-  m_SizeDelta: {x: -48.051, y: 0.001}
+  m_AnchoredPosition: {x: 0.46798706, y: -16.024}
+  m_SizeDelta: {x: -55.726, y: -32.048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270360633
 MonoBehaviour:
@@ -8403,14 +8403,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 50
+    m_MaxSize: 34
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tap Challenge\r!\nAsah musikalitas lo dengan mainin musik ini!\r"
+  m_Text: "Tap Challenge! Main dan asah \r\nkemampuan musik lo!\r"
 --- !u!222 &1270360634
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11062,6 +11062,8 @@ MonoBehaviour:
       name: 
       value: 
   textResult: {fileID: 0}
+  id: 
+  lobbyCode: 
 --- !u!4 &1574569451
 Transform:
   m_ObjectHideFlags: 0

@@ -330,7 +330,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &67312094
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -451,7 +453,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &149065764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -619,7 +623,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &202181467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -830,7 +836,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &329593999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1107,7 +1115,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &410553572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1403,7 +1413,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &512024210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1954,7 +1966,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706611610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1158303284}
@@ -2320,7 +2332,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &914709260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2699,7 +2713,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &1078925189
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2814,7 +2830,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127895178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0882, y: 1.0882, z: 1.0882}
   m_Children: []
   m_Father: {fileID: 1303407570}
@@ -2822,8 +2838,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 20.599976, y: -2.2000122}
-  m_SizeDelta: {x: -147.1, y: -156.6}
+  m_AnchoredPosition: {x: -16, y: -14}
+  m_SizeDelta: {x: -390.2, y: -655.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127895180
 MonoBehaviour:
@@ -2904,7 +2920,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158303283}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3133,7 +3149,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &1199393512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3478,7 +3496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.027518226, y: 0.085}
   m_AnchorMax: {x: 0.97369635, y: 0.9693835}
-  m_AnchoredPosition: {x: 1.472, y: 0}
+  m_AnchoredPosition: {x: 1.4719849, y: 0}
   m_SizeDelta: {x: -38.2728, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1381673670
@@ -3752,7 +3770,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &1415903133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4253,7 +4273,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &1685563785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4599,7 +4621,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814257538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0882, y: 1.0882, z: 1.0882}
   m_Children: []
   m_Father: {fileID: 1441896474}
@@ -4607,8 +4629,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 20.599976, y: -2.2000122}
-  m_SizeDelta: {x: -147.1, y: -156.6}
+  m_AnchoredPosition: {x: -16, y: -14}
+  m_SizeDelta: {x: -390.2, y: -655.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1814257540
 MonoBehaviour:
@@ -5063,6 +5085,8 @@ MonoBehaviour:
       name: 
       value: 
   textResult: {fileID: 1784489354}
+  id: 
+  lobbyCode: 
 --- !u!4 &1971798504
 Transform:
   m_ObjectHideFlags: 0
@@ -5490,7 +5514,9 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &2028378617
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5585,7 +5611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &2087166418
 Animator:
   serializedVersion: 3
@@ -5613,8 +5639,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087166417}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.10499998, z: -0.20000005}
-  m_LocalScale: {x: 0.47119337, y: 0.49999988, z: 0.49999988}
+  m_LocalPosition: {x: 0, y: 0.105, z: -0.276}
+  m_LocalScale: {x: 0.7553908, y: 0.8015718, z: 0.8015718}
   m_Children:
   - {fileID: 410553569}
   - {fileID: 1078925186}
