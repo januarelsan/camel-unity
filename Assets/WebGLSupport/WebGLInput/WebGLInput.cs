@@ -212,7 +212,7 @@ namespace WebGLSupport
 
         void OnWindowBlur()
         {
-            blurBlock = true;
+            blurBlock = false;
         }
 
         /// <summary>

@@ -191,7 +191,7 @@ public class Music2Manager : MonoBehaviour
     public void EndSeq()
     {
         ApiManagerR managerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();
-        managerR.DirectLinkparam();
+        managerR.DirectLink();
 
     }
     public void CountingTrue() { 

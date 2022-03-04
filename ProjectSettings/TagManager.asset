@@ -9,6 +9,7 @@ TagManager:
   - limit
   - miss
   - UrlManager
+  - ScoreManager
   layers:
   - Default
   - TransparentFX

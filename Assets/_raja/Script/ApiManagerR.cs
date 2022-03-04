@@ -12,19 +12,28 @@ public class ApiManagerR : MonoBehaviour
     public int score;
     public float time;
     public Param param;
-    public Text textResult; 
+    public Text textResult;
+    public string id;
+    public string lobbyCode;
+
     void Start()
     {
         url = "januarelsan.com/api/link/get/";
     }
 
     // Update is called once per frame
-    void Update()
+    public void WaitID()
     {
-        
+        if (textResult != null)
+        {
+            textResult.text = id;
+        }
     }
-    public void DirectLink() { }
-    
+    public void DirectLink() {
+        StartGame();
+
+    }
+
     public void DirectLinkparam() {
         if (textResult != null) {
             textResult.text = "";

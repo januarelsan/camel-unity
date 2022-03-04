@@ -11,8 +11,9 @@ public class tapbutton : MonoBehaviour
     //public Animator anim;
     private Material m_Mat;
     public Music3Manager music3Manager;
+    public A1Manager a1Manager;
     public ApiManagerR apiManagerR;
-
+    public bool isCorrectAns;
     void OnEnable()
     {
         Renderer r = transform.GetComponent<Renderer>();
@@ -42,21 +43,39 @@ public class tapbutton : MonoBehaviour
             {
                 baju.SetActive(false);
             }
-            if (music3Manager == null)
+            if (music3Manager != null)
             {
-                apiManagerR.DirectLinkparam();
+                //apiManagerR.DirectLinkparam();
+                CheckAns();
 
-
+            }
+            if (a1Manager != null)
+            {
+                a1Manager.DoActions(isCorrectAns);
             }
             else if (music3Manager != null)
             {
                 music3Manager.StopSound();
             }
-        }
-        else { 
-                apiManagerR.DirectLinkparam();
-
 
         }
+        else {
+            //apiManagerR.DirectLinkparam();
+            //CheckAns();
+
+        }
+    }
+    public void CheckAns() {
+        apiManagerR.DirectLinkparam();
+
+        if (isCorrectAns)
+        {
+            //apiManagerR.DirectLinkparam(isCorrectAns);
+        }
+        else {
+
+            //apiManagerR.DirectLinkparam();
+        }
+    
     }
 }

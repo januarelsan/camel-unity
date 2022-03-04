@@ -80,7 +80,7 @@ namespace WebGLSupport
         public WrappedInputField(InputField input)
         {
             this.input = input;
-            checker = new RebuildChecker(this);
+            //checker = new RebuildChecker(this);
         }
 
         public RectTransform RectTransform()
