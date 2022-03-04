@@ -8,10 +8,18 @@ public class LinkItemController : Singleton<LinkItemController>
 {
     [DllImport("__Internal")]
     private static extern void OpenURL(string url);
-    public void CallGetLinkAPI(string id)
+
+    private string lobbyCode;
+    private string identity_no;
+    public void CallGetLinkAPI(List<string> parameters)
     {
-        List<string> parameters = new List<string>() { id };
-        APIController.Instance.Get("link/get", CallGetLinkAPIResponse, parameters);
+        lobbyCode = parameters[1];
+        identity_no = parameters[2];
+
+        List<string> _parameters = new List<string>();       
+        _parameters.Add(parameters[0]);
+
+        APIController.Instance.Get("link/get", CallGetLinkAPIResponse, _parameters);
         
     }
 
@@ -34,7 +42,13 @@ public class LinkItemController : Singleton<LinkItemController>
                 {
                     LinkItem link = generalResponse.link_item;                    
                     Debug.Log(link.value);
-                    OpenURL(link.value);
+
+                     
+
+                    string url = link.value + "?" + "lobbyCode=" + lobbyCode + "&" + "identity_no=" + identity_no ;
+                    Debug.Log(url);
+
+                    OpenURL(url);
 
                 }
                 else

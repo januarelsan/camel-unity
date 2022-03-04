@@ -49,7 +49,10 @@ public class ApiManagerR : MonoBehaviour
     public void StartGame()
     {
         // SceneManager.LoadScene("New Scene");
-        LinkItemController.Instance.CallGetLinkAPI(gameID);
+         List<string> parameters = new List<string>();                                 
+        parameters.Add(gameID);
+        LinkItemController.Instance.CallGetLinkAPI(parameters);
+        
     }
 
 

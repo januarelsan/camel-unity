@@ -11,4 +11,12 @@ public class PlayerPrefController : Singleton<PlayerPrefController>
     public string GetIdentityNumber(){
         return PlayerPrefs.GetString("identity_no");
     }
+
+    public void SetLobbyCode(string value){
+        PlayerPrefs.SetString("lobbyCode",value);
+    }
+
+    public string GetLobbyCode(){
+        return PlayerPrefs.GetString("lobbyCode");
+    }
 }

@@ -19,6 +19,7 @@ public class URLGetter : Singleton<URLGetter>
 
     public string GetParam(string name){
         string url =  Application.absoluteURL;
+        
         Uri myUri = new Uri(url);
         string value = HttpUtility.ParseQueryString(myUri.Query).Get(name);
         return value;

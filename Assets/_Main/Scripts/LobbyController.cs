@@ -26,6 +26,20 @@ public class LobbyController : Singleton<LobbyController>
     [SerializeField] private Toggle publicToggle;    
 
     void Start() {
+
+        #if UNITY_EDITOR
+
+            // PlayerPrefs.DeleteAll();
+            PlayerPrefController.Instance.SetIdentityNumber("7306081201950010");            
+
+        #else
+            
+            if( URLGetter.Instance.GetParam("identity_no") != "" ){
+                PlayerPrefController.Instance.SetIdentityNumber(URLGetter.Instance.GetParam("identity_no"));            
+            }
+
+        #endif
+
         
     }
     
@@ -38,6 +52,7 @@ public class LobbyController : Singleton<LobbyController>
             visibility = "1";
 
         parameters.Add("visibility", visibility);
+        parameters.Add("identity_no", PlayerPrefController.Instance.GetIdentityNumber());
         
         APIController.Instance.PostWithFormData("lobby/create",CallLobbyCreateAPIResponse, parameters);
     }
@@ -60,6 +75,7 @@ public class LobbyController : Singleton<LobbyController>
                 foreach (Lobby lobby in lobbyCollection.lobbies)
                 {         
                     Debug.Log(lobby.name);
+                    PlayerPrefController.Instance.SetLobbyCode(lobby.code);
                     OpenLobbyHome(lobby);
                 }
                 
@@ -126,7 +142,7 @@ public class LobbyController : Singleton<LobbyController>
     }
 
     public void CallLobbyJoinAPI(string code){
-        List<string> parameters = new List<string>(){code,"7306081201950010"};
+        List<string> parameters = new List<string>(){code,PlayerPrefController.Instance.GetIdentityNumber()};
         APIController.Instance.Get("lobby/join", CallLobbyJoinAPIResponse, parameters);        
     }
 
@@ -184,7 +200,7 @@ public class LobbyController : Singleton<LobbyController>
         if (generalResponse.status == "success")
         {
             Lobby lobby = generalResponse.lobby;            
-
+            PlayerPrefController.Instance.SetLobbyCode(lobby.code);
             publicLobbyPanel.SetActive(false);
             createLobbyPanel.SetActive(false);
             lobbyHomePanel.SetActive(true);
