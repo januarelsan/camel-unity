@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Music 2.unity
     guid: bc8cac7d88daf604596f2f8aad62b966
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Music3.unity
     guid: ea99ab439312f424197ae06b2cdf1047
   - enabled: 0
@@ -63,18 +63,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Q1.unity
     guid: dce17f2e6802ff0478371228b26f2479
   - enabled: 0
-    path: Assets/Scenes/Fashion2 B1.unity
-    guid: 8c8376dbf2828324083d419a2379f04b
-  - enabled: 0
-    path: Assets/Scenes/ArtPilar2 Q3.unity
+    path: Assets/Scenes/Q3.unity
     guid: debeb9678e6c675429d5ff853d33cba2
   - enabled: 0
     path: Assets/Scenes/Q4.unity
     guid: 778ba10bc1067af4280ad9bdd4717724
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/Q5.unity
+    guid: 8c8376dbf2828324083d419a2379f04b
+  - enabled: 0
     path: Assets/Scenes/Music 2 -2.unity
     guid: 0d77341865574114898c46996ce8cbdc
   - enabled: 0
     path: Assets/_Main/Scenes/Lobby.unity
     guid: caf0dc7237b45cc4aade64e29b783e91
+  - enabled: 0
+    path: Assets/Scenes/Q6.unity
+    guid: 7d7196f299eea6841bd6427c01710cd6
   m_configObjects: {}

@@ -327,6 +327,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 1971798505}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
 --- !u!65 &67312094
@@ -450,6 +454,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
 --- !u!65 &149065764
@@ -620,6 +628,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
 --- !u!65 &202181467
@@ -833,6 +845,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
 --- !u!65 &329593999
@@ -1108,6 +1124,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 1971798505}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
 --- !u!65 &410553572
@@ -1123,23 +1143,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4557414, y: 0.05667293, z: 0.87935543}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &502868084 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3404906540095333396, guid: ce2db699a5ec24f4d9cb3b0fa1c66973, type: 3}
-  m_PrefabInstance: {fileID: 3404906540135631968}
-  m_PrefabAsset: {fileID: 0}
---- !u!225 &502868088
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502868084}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
 --- !u!1 &510790871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1326,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
 --- !u!65 &512024210
@@ -2243,6 +2250,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
 --- !u!65 &914709260
@@ -2545,6 +2556,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 1971798505}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
 --- !u!65 &1078925189
@@ -2905,6 +2920,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
 --- !u!65 &1199393512
@@ -3356,6 +3375,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
 --- !u!65 &1415903133
@@ -3371,23 +3394,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4557414, y: 0.05667293, z: 0.87935543}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1427049437 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3404906538878322621, guid: ce2db699a5ec24f4d9cb3b0fa1c66973, type: 3}
-  m_PrefabInstance: {fileID: 3404906540135631968}
-  m_PrefabAsset: {fileID: 0}
---- !u!225 &1427049441
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427049437}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
 --- !u!1 &1571970228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3772,6 +3778,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 1971798505}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 1
 --- !u!65 &1685563785
@@ -4852,6 +4862,10 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
 --- !u!65 &2028378617
@@ -5132,10 +5146,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1745310745}
     m_Modifications:
-    - target: {fileID: 3404906538878322621, guid: ce2db699a5ec24f4d9cb3b0fa1c66973, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3404906539274425474, guid: ce2db699a5ec24f4d9cb3b0fa1c66973, type: 3}
       propertyPath: m_Name
       value: Panel-Answer
@@ -5222,30 +5232,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3404906539274425475, guid: ce2db699a5ec24f4d9cb3b0fa1c66973, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3404906539274425478, guid: ce2db699a5ec24f4d9cb3b0fa1c66973, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3404906539274425478, guid: ce2db699a5ec24f4d9cb3b0fa1c66973, type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3404906539274425478, guid: ce2db699a5ec24f4d9cb3b0fa1c66973, type: 3}
-      propertyPath: m_BlocksRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3404906540095333396, guid: ce2db699a5ec24f4d9cb3b0fa1c66973, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3404906540891950112, guid: ce2db699a5ec24f4d9cb3b0fa1c66973, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3404906540891950114, guid: ce2db699a5ec24f4d9cb3b0fa1c66973, type: 3}
-      propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -86,13 +86,14 @@ GameObject:
   - component: {fileID: 3404906538878322622}
   - component: {fileID: 3404906538878322560}
   - component: {fileID: 3404906538878322623}
+  - component: {fileID: 1427049441}
   m_Layer: 5
   m_Name: true
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3404906538878322622
 RectTransform:
   m_ObjectHideFlags: 0
@@ -152,6 +153,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &1427049441
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404906538878322621}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &3404906539274425474
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,9 +253,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3404906539274425474}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &4448213361939834086
 MonoBehaviour:
@@ -259,6 +272,8 @@ MonoBehaviour:
   falseUI: {fileID: 0}
   trueUI: {fileID: 0}
   buttonAct: {fileID: 0}
+  id: 
+  lobbyCode: 
 --- !u!1 &3404906539443697582
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,13 +510,14 @@ GameObject:
   - component: {fileID: 3404906540095333397}
   - component: {fileID: 3404906540095333399}
   - component: {fileID: 3404906540095333398}
+  - component: {fileID: 502868088}
   m_Layer: 5
   m_Name: false
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3404906540095333397
 RectTransform:
   m_ObjectHideFlags: 0
@@ -561,6 +577,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &502868088
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404906540095333396}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &3404906540891950112
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +704,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3404906540891950115}
   m_OnClick:
     m_PersistentCalls:

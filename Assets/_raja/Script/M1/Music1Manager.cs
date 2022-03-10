@@ -8,6 +8,9 @@ public class Music1Manager : MonoBehaviour
     public Button StartButton;
     public List<Animator> animators;
     public Animator animatorSq;
+    public List<Transform> animatiorTransform;
+    public List<Transform> endPos;
+    public List<Transform> startPos;
     public AudioSource source;
     public AudioClip clip;
     public int score;
@@ -26,11 +29,6 @@ public class Music1Manager : MonoBehaviour
         StartButton.GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void StartAnimation() {
         StartButton.GetComponent<CanvasGroup>().alpha = 0;
         StartButton.GetComponent<CanvasGroup>().interactable = false;
@@ -38,15 +36,33 @@ public class Music1Manager : MonoBehaviour
         //source.Play();
         source.clip = clip;
         source.Play();
-        animatorSq.SetTrigger("Start");
-        
+        // doing animation
+        //animatorSq.SetTrigger("Start");
+
+        for (int i = 0; i < animatiorTransform.Count; i++)
+        {
+            animatiorTransform[i].DOMoveX(startPos[i].position.x, 0);
+            animatiorTransform[i].DOMoveY(startPos[i].position.y, 0);
+            animatiorTransform[i].DOKill();
+            
+            Debug.Log(animatiorTransform[i].gameObject.name);
+        }
+
+        for (int i = 0; i < animatiorTransform.Count; i++)
+        {
+            animatiorTransform[i].DOMoveY(endPos[i].position.y, 27).SetEase(Ease.Linear).SetDelay(3);
+            Debug.Log(animatiorTransform[i].gameObject.name);
+
+        }
+
         Invoke("EndSeq", 30);
         //foreach (Animator animator1 in animators) {
         //    animator1.SetTrigger("Start");
         //}
     }
     public void EndSeq() {
-        animatorSq.SetTrigger("Calls");
+        //animatorSq.SetTrigger("Calls");
+        
         ApiManagerR managerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();
         managerR.DirectLink();
 

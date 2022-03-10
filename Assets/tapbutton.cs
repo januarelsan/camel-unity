@@ -12,6 +12,14 @@ public class tapbutton : MonoBehaviour
     private Material m_Mat;
     public Music3Manager music3Manager;
     public A1Manager a1Manager;
+    public Art3 a3Manager;
+    public Fasion1Manager f1Manager;
+    [SerializeField]
+    public F2Manager f2Manager;
+    public F3Manager f3Manager;
+
+
+
     public ApiManagerR apiManagerR;
     public bool isCorrectAns;
     void OnEnable()
@@ -46,7 +54,8 @@ public class tapbutton : MonoBehaviour
             if (music3Manager != null)
             {
                 //apiManagerR.DirectLinkparam();
-                CheckAns();
+                //CheckAns();
+                music3Manager.ScoreM2(isCorrectAns);
 
             }
             if (a1Manager != null)
@@ -57,12 +66,42 @@ public class tapbutton : MonoBehaviour
             {
                 music3Manager.StopSound();
             }
+            else if (a3Manager != null)
+            {
+                a3Manager.DoScoress(isCorrectAns);
+            }
+            else if (f1Manager != null)
+            {
+                f1Manager.DoAct();
+            }
+            else if (f2Manager != null)
+            {
+                Debug.Log("linked1");
 
+                f2Manager.DoAct();//
+            }
+            else if (f3Manager != null)
+            {
+               
+
+                f3Manager.DoAct();//
+            }
+            //else if (f3Manager != null)
+            //{
+
+
+            //    f3Manager.DoAct();//
+            //}
         }
         else {
             //apiManagerR.DirectLinkparam();
             //CheckAns();
+            if (f2Manager != null)
+            {
+                Debug.Log("linked1");
 
+                f2Manager.DoAct();//
+            }
         }
     }
     public void CheckAns() {

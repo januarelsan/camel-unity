@@ -95,6 +95,7 @@ public class Selfie : MonoBehaviour
         zapparCamera.GetComponent<ZapparCamera>().ToggleActiveCamera(true);
         
         result.sprite = sprite;
+        result.preserveAspect = true;
         result2.sprite = sprite;
         //camResult.sprite = spriteGS;
 

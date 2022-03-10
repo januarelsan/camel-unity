@@ -5,7 +5,8 @@ using SimpleHTTP;
 
 public class APIController : Singleton<APIController>
 {
-    private const string baseURL = "https://januarelsan.com/api/";
+    //private const string baseURL = "https://januarelsan.com/api/";
+    private const string baseURL = "103.146.202.155/api/";
     // private const string baseURL = "http://127.0.0.1:8000/api/";
     
     private string token = "soH3NGTFFg66Rs4HZe42Sov2iuvKDKCLJWAAujnZ";

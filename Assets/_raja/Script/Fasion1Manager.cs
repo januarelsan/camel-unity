@@ -76,4 +76,13 @@ public class Fasion1Manager : MonoBehaviour
 
         }
     }
+
+    public void DoAct()
+    {
+        ApiManagerR apiManagerR;
+        apiManagerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();
+        apiManagerR.DirectLinkparam();
+
+    }
+
 }

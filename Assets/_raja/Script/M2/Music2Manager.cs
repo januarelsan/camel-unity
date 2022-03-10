@@ -22,7 +22,7 @@ public class Music2Manager : MonoBehaviour
     [SerializeField] public AudioClip clip;
     public bool allowPlay;
     public bool playAudios;
-
+    public ScoringManager scoringManager;
     void Start()
     {
         Color colors = Color.white;
@@ -239,12 +239,15 @@ public class Music2Manager : MonoBehaviour
             Debug.Log("true");
             Color colors = Color.green;
             colors.a = 1f;
+            scoringManager.DecisionMaking(true);
             //imageResult.color = colors;
         }
         else {
             Debug.Log("true");
             Color colors = Color.red;
             colors.a = 1f;
+            scoringManager.DecisionMaking(false);
+
             //imageResult.color = colors;
 
         }

@@ -3987,7 +3987,13 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 1588108385}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &577619520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4017,7 +4023,13 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!1 &578493980
 GameObject:
   m_ObjectHideFlags: 0
@@ -10917,6 +10929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1588108384}
+  - component: {fileID: 1588108385}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -10948,6 +10961,18 @@ RectTransform:
   m_AnchoredPosition: {x: -0.046, y: 0.558}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1588108385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588108383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e976e92599b35f847bde999099dca7c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1590250680
 GameObject:
   m_ObjectHideFlags: 0
@@ -12039,7 +12064,13 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 1588108385}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &1726233614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13364,6 +13395,8 @@ MonoBehaviour:
       name: 
       value: 
   textResult: {fileID: 0}
+  id: 
+  lobbyCode: 
 --- !u!4 &2009259238
 Transform:
   m_ObjectHideFlags: 0
@@ -13625,7 +13658,13 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 1588108385}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &2015082547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13814,7 +13853,13 @@ MonoBehaviour:
   door2: {fileID: 0}
   baju: {fileID: 0}
   music3Manager: {fileID: 0}
+  a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 1588108385}
   apiManagerR: {fileID: 0}
+  isCorrectAns: 0
 --- !u!65 &2050996968
 BoxCollider:
   m_ObjectHideFlags: 0

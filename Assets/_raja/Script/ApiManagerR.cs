@@ -8,7 +8,7 @@ public class ApiManagerR : MonoBehaviour
 {
     // Start is called before the first frame update
     public string gameID;
-    public string url = "januarelsan.com/api/link/get/";
+    public string url = "103.146.202.155/api/link/get/";
     public int score;
     public float time;
     public Param param;
@@ -18,7 +18,7 @@ public class ApiManagerR : MonoBehaviour
 
     void Start()
     {
-        url = "januarelsan.com/api/link/get/";
+        url = "103.146.202.155/";
     }
 
     // Update is called once per frame
@@ -61,7 +61,7 @@ public class ApiManagerR : MonoBehaviour
     public IEnumerator GetLink() {
 
 
-        url = "januarelsan.com/api/link/get/";
+        url = "103.146.202.155/api/link/get/";
         string uri = url + gameID;
         Debug.Log(uri);
         using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
