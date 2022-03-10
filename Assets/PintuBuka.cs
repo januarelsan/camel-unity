@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SimpleHTTP;
 
 public class PintuBuka : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class PintuBuka : MonoBehaviour
     [SerializeField] Material doorMat;
     [SerializeField] Texture2D doorTex;
     bool isEnable;
+
+    private string identity_no;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,15 +33,67 @@ public class PintuBuka : MonoBehaviour
         if (isEnable)
         {
             doorMat.mainTexture = doorTex;
-            anim.SetTrigger("pintu");
-            door.SetActive(true);
+            // anim.SetTrigger("pintu");
+            // door.SetActive(true);
 
-            List<string> parameters = new List<string>();                                 
-            parameters.Add("20");
-            LinkItemController.Instance.CallGetLinkAPI(parameters);
+            List<string> parameter_id = new List<string>();                                 
+            parameter_id.Add("20");
+
+            
+            identity_no = PlayerPrefController.Instance.GetIdentityNumber();                                        
+
+            APIController.Instance.Get("link/get", CallGetLinkLobbyAPIResponse, parameter_id);
 
         }
             //m_Mat.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
             //SceneManager.LoadScene("lobby");
+    }
+
+    void CallGetLinkLobbyAPIResponse(Client http)
+    {
+
+        if (http.IsSuccessful())
+        {
+            Response resp = http.Response();
+
+            if (resp.IsOK())
+            {
+
+                Debug.Log(resp.ToString());
+
+                GeneralResponse generalResponse = JsonUtility.FromJson<GeneralResponse>(resp.ToString());
+
+
+                if (generalResponse.status == "success")
+                {
+                    LinkItem link = generalResponse.link_item;                    
+                    Debug.Log(link.value);
+
+                     
+
+                    string url = link.value + "?" + "identity_no=" + identity_no ;
+                    Debug.Log(url);
+                    // url = "www.google.com";
+
+                    URLOpener.Instance._OpenURL(url);
+
+                }
+                else
+                {
+                    MessageController.Instance.ShowMessage(generalResponse.message);
+                }
+
+            }
+            else
+            {
+                Debug.Log(resp.ToString());
+            }
+
+        }
+        else
+        {
+            Debug.Log("error: " + http.Error());
+            MessageController.Instance.ShowMessage("Something Error, Please Try Again!");
+        }
     }
 }

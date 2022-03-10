@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using SimpleHTTP;
 
 public class ApiManagerR : MonoBehaviour
 {
@@ -49,12 +50,54 @@ public class ApiManagerR : MonoBehaviour
     public void StartGame()
     {
         // SceneManager.LoadScene("New Scene");
-         List<string> parameters = new List<string>();                                 
+        List<string> parameters = new List<string>();                                 
         parameters.Add(gameID);
-        parameters.Add(lobbyCode);
-        parameters.Add(id);
-        LinkItemController.Instance.CallGetLinkAPI(parameters);
+
+        APIController.Instance.Get("link/get", CallGetLinkAPIResponse, parameters);
         
+    }
+
+    void CallGetLinkAPIResponse(Client http)
+    {
+
+        if (http.IsSuccessful())
+        {
+            Response resp = http.Response();
+
+            if (resp.IsOK())
+            {
+
+                Debug.Log(resp.ToString());
+
+                GeneralResponse generalResponse = JsonUtility.FromJson<GeneralResponse>(resp.ToString());
+
+
+                if (generalResponse.status == "success")
+                {
+                    LinkItem link = generalResponse.link_item;                    
+                    
+                    //Do Something Here!!
+                    //string url = link.value + "?" + "lobbyCode=" + lobbyCode + "&" + "identity_no=" + identity_no ;                    
+                    // URLOpener.Instance._OpenURL(url);
+
+                }
+                else
+                {
+                    MessageController.Instance.ShowMessage(generalResponse.message);
+                }
+
+            }
+            else
+            {
+                Debug.Log(resp.ToString());
+            }
+
+        }
+        else
+        {
+            Debug.Log("error: " + http.Error());
+            MessageController.Instance.ShowMessage("Something Error, Please Try Again!");
+        }
     }
 
 
