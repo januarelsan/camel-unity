@@ -29,7 +29,7 @@ public class Music2Manager : MonoBehaviour
         colors.a = 0f;
         //imageResult.color = colors;
         btnStart.gameObject.SetActive(true);
-        canvasAnswer.interactable = false;
+        //canvasAnswer.interactable = false;
         imageQuestion.sprite = questionDefault;
 
         if (playAudios == false) {
@@ -43,6 +43,40 @@ public class Music2Manager : MonoBehaviour
     {
         
     }
+    public void PrepareCall() {
+        if (playAudios)
+        {
+            if (isAnswer == false)
+            {
+                imageQuestion.sprite = questionDefault;
+                Debug.Log(imageQuestion.sprite.name);
+                btnStart.gameObject.SetActive(true);
+                canvasAnswer.interactable = false;
+            }
+            else
+            {
+
+
+            }
+        }
+
+        else {
+            if (isAnswer == false)
+            {
+                //imageQuestion.sprite = questionDefault;
+                Debug.Log(imageQuestion.sprite.name);
+                canvasAnswer.interactable = true;
+            }
+            else
+            {
+
+
+            }
+
+        }
+    }
+
+
     public void PlayBTN()
     {
         //Invoke("PlayQuestion", 0);
@@ -93,6 +127,7 @@ public class Music2Manager : MonoBehaviour
         allowPlay = true;
 
         StartCoroutine("PlayQuestionSequence");
+        
         if (playAudios) {
             Invoke("StopAllow", 19f);
         }
@@ -102,20 +137,26 @@ public class Music2Manager : MonoBehaviour
     {
         if (playAudios == true)
         {
+            CancelInvoke("StopAllow");
+            StopCoroutine("PlayQuestionSequence");
             if (isAnswer == false)
             {
+                Debug.Log("ssss");
+
                 imageQuestion.sprite = questionDefault;
+                Debug.Log(imageQuestion.sprite.name);
                 btnStart.gameObject.SetActive(true);
                 canvasAnswer.interactable = false;
-
             }
 
             if (playAudios)
             {
                 source.Stop();
+                Debug.Log("dddd");
+
             }
 
-            StopCoroutine("PlayQuestionSequence");
+            
         }
         else { 
         
@@ -163,8 +204,9 @@ public class Music2Manager : MonoBehaviour
                 }
 
                 imageQuestion.sprite = listQuestion[rands];
+
                 //curIndex++;
-                Debug.Log(rands);
+                Debug.Log(imageQuestion.sprite.name);
                 yield return new WaitForSeconds(delay);
                 StartCoroutine("PlayQuestionSequence");
             }
@@ -243,7 +285,7 @@ public class Music2Manager : MonoBehaviour
             //imageResult.color = colors;
         }
         else {
-            Debug.Log("true");
+            Debug.Log("false");
             Color colors = Color.red;
             colors.a = 1f;
             scoringManager.DecisionMaking(false);
@@ -254,7 +296,7 @@ public class Music2Manager : MonoBehaviour
         isAnswer = true;
         canvasAnswer.interactable = false;
         StopQuestion();
-        EndSeq();
+        //EndSeq();
     }
 
 

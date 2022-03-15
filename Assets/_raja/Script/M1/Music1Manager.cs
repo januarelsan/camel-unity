@@ -50,7 +50,7 @@ public class Music1Manager : MonoBehaviour
 
         for (int i = 0; i < animatiorTransform.Count; i++)
         {
-            animatiorTransform[i].DOMoveY(endPos[i].position.y, 27).SetEase(Ease.Linear).SetDelay(3);
+            animatiorTransform[i].DOMoveY(endPos[i].position.y, 27).SetEase(Ease.Linear).SetDelay(3.2f);
             Debug.Log(animatiorTransform[i].gameObject.name);
 
         }

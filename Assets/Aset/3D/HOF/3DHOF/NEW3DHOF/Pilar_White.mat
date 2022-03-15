@@ -10,7 +10,7 @@ Material:
   m_Name: Pilar_White
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 0
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -36,11 +36,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 604248873d2192b4f8390436677ef55b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3957e79ac830b794ea71ff3821292ee3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 604248873d2192b4f8390436677ef55b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3957e79ac830b794ea71ff3821292ee3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -92,6 +92,6 @@ Material:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 0.98833734, g: 0.98833734, b: 0.98833734, a: 1}
+    - _EmissionColor: {r: 0.6807505, g: 0.6807505, b: 0.6807505, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

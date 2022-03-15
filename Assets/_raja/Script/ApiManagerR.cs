@@ -52,8 +52,10 @@ public class ApiManagerR : MonoBehaviour
         // SceneManager.LoadScene("New Scene");
         List<string> parameters = new List<string>();                                 
         parameters.Add(gameID);
-
-        APIController.Instance.Get("link/get", CallGetLinkAPIResponse, parameters);
+        parameters.Add(lobbyCode);
+        parameters.Add(id);
+        LinkItemController.Instance.CallGetLinkAPI(parameters);
+//        APIController.Instance.Get("link/get", CallGetLinkAPIResponse, parameters);
         
     }
 
@@ -74,11 +76,12 @@ public class ApiManagerR : MonoBehaviour
 
                 if (generalResponse.status == "success")
                 {
-                    LinkItem link = generalResponse.link_item;                    
-                    
+                    LinkItem link = generalResponse.link_item;
+
                     //Do Something Here!!
                     //string url = link.value + "?" + "lobbyCode=" + lobbyCode + "&" + "identity_no=" + identity_no ;                    
                     // URLOpener.Instance._OpenURL(url);
+                    //Application.ExternalEval("window.open(\"" + link.value + "\",\"_blank\")");
 
                 }
                 else

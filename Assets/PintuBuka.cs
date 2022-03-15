@@ -40,8 +40,8 @@ public class PintuBuka : MonoBehaviour
             parameter_id.Add("20");
 
             
-            identity_no = PlayerPrefController.Instance.GetIdentityNumber();                                        
-
+            identity_no = PlayerPrefController.Instance.GetIdentityNumber();
+            Debug.Log(identity_no);
             APIController.Instance.Get("link/get", CallGetLinkLobbyAPIResponse, parameter_id);
 
         }

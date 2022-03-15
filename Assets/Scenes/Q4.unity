@@ -179,6 +179,7 @@ MonoBehaviour:
   blinkAnimation: 1
   sprites: []
   refs: {fileID: 0}
+  scoringManager: {fileID: 0}
 --- !u!114 &37333825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,7 +454,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2dcd2ef4a71b6bf48a2fc9c7a428e918, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9374fcf99499ede43ae6558cd26f16bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -660,7 +661,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9ce2c993125a88241a1c68b0abd240de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e261f399849e13349abdc879acb1693d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -778,8 +779,14 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 1099614254}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
+  corrects: {x: 0, y: 0, z: 0}
+  falses: {x: 0, y: 0, z: 0}
 --- !u!65 &286338489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1107,7 +1114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 69a82744201586c468e0f15676290a90, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3901bc8099344cd4898f8c41e6872d09, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1252,8 +1259,14 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 1099614254}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
+  corrects: {x: 0, y: 0, z: 0}
+  falses: {x: 0, y: 0, z: 0}
 --- !u!65 &373518529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1508,8 +1521,14 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 1099614254}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
+  corrects: {x: 0, y: 0, z: 0}
+  falses: {x: 0, y: 0, z: 0}
 --- !u!1 &546415400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,6 +1778,7 @@ MonoBehaviour:
   blinkAnimation: 1
   sprites: []
   refs: {fileID: 0}
+  scoringManager: {fileID: 0}
 --- !u!114 &657526052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2045,6 +2065,7 @@ MonoBehaviour:
   blinkAnimation: 1
   sprites: []
   refs: {fileID: 0}
+  scoringManager: {fileID: 0}
 --- !u!114 &765076161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2502,6 +2523,7 @@ MonoBehaviour:
   blinkAnimation: 1
   sprites: []
   refs: {fileID: 0}
+  scoringManager: {fileID: 0}
 --- !u!114 &956000459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2605,6 +2627,7 @@ MonoBehaviour:
   blinkAnimation: 0
   sprites: []
   refs: {fileID: 0}
+  scoringManager: {fileID: 0}
 --- !u!4 &974903158
 Transform:
   m_ObjectHideFlags: 0
@@ -2733,7 +2756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 69a82744201586c468e0f15676290a90, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3901bc8099344cd4898f8c41e6872d09, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2807,6 +2830,7 @@ MonoBehaviour:
   blinkAnimation: 1
   sprites: []
   refs: {fileID: 0}
+  scoringManager: {fileID: 0}
 --- !u!114 &1008071141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2945,8 +2969,14 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 1099614254}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
+  corrects: {x: 0, y: 0, z: 0}
+  falses: {x: 0, y: 0, z: 0}
 --- !u!65 &1043230801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2997,10 +3027,11 @@ MonoBehaviour:
   - {fileID: 541385380}
   blinkAnimation: 0
   sprites:
-  - {fileID: 21300000, guid: 69a82744201586c468e0f15676290a90, type: 3}
-  - {fileID: 21300000, guid: 9ce2c993125a88241a1c68b0abd240de, type: 3}
-  - {fileID: 21300000, guid: 2dcd2ef4a71b6bf48a2fc9c7a428e918, type: 3}
+  - {fileID: 21300000, guid: 3901bc8099344cd4898f8c41e6872d09, type: 3}
+  - {fileID: 21300000, guid: e261f399849e13349abdc879acb1693d, type: 3}
+  - {fileID: 21300000, guid: 9374fcf99499ede43ae6558cd26f16bc, type: 3}
   refs: {fileID: 339083563}
+  scoringManager: {fileID: 0}
 --- !u!4 &1099614255
 Transform:
   m_ObjectHideFlags: 0
@@ -3243,6 +3274,7 @@ MonoBehaviour:
   blinkAnimation: 1
   sprites: []
   refs: {fileID: 0}
+  scoringManager: {fileID: 0}
 --- !u!114 &1168915711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4123,6 +4155,7 @@ MonoBehaviour:
   blinkAnimation: 1
   sprites: []
   refs: {fileID: 0}
+  scoringManager: {fileID: 0}
 --- !u!114 &1678223552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4342,8 +4375,14 @@ MonoBehaviour:
   baju: {fileID: 0}
   music3Manager: {fileID: 1099614254}
   a1Manager: {fileID: 0}
+  a3Manager: {fileID: 0}
+  f1Manager: {fileID: 0}
+  f2Manager: {fileID: 0}
+  f3Manager: {fileID: 0}
   apiManagerR: {fileID: 0}
   isCorrectAns: 0
+  corrects: {x: 0, y: 0, z: 0}
+  falses: {x: 0, y: 0, z: 0}
 --- !u!65 &1759702891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4682,6 +4721,7 @@ MonoBehaviour:
   blinkAnimation: 1
   sprites: []
   refs: {fileID: 0}
+  scoringManager: {fileID: 0}
 --- !u!114 &1872077823
 MonoBehaviour:
   m_ObjectHideFlags: 0

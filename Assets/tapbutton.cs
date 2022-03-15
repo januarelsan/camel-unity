@@ -22,6 +22,11 @@ public class tapbutton : MonoBehaviour
 
     public ApiManagerR apiManagerR;
     public bool isCorrectAns;
+
+    public Vector3 corrects;
+    public Vector3 falses;
+
+
     void OnEnable()
     {
         Renderer r = transform.GetComponent<Renderer>();
@@ -68,7 +73,14 @@ public class tapbutton : MonoBehaviour
             }
             else if (a3Manager != null)
             {
-                a3Manager.DoScoress(isCorrectAns);
+                Vector3 newPos;
+                if (isCorrectAns == true) {
+                    newPos = corrects;
+                }
+                else {
+                    newPos = falses;
+                }
+                a3Manager.DoScoress(isCorrectAns,transform,newPos);
             }
             else if (f1Manager != null)
             {

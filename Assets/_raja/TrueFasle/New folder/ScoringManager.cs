@@ -13,9 +13,16 @@ public class ScoringManager : MonoBehaviour
     public Button buttonAct;
     public string id;
     public string lobbyCode;
+    public bool notDoCheck;
     // Start is called before the first frame update
     void Start()
     {
+        if (notDoCheck == false) {
+            DoCheck();
+        }
+
+    }
+    public void DoCheck() {
         falseUI = transform.GetChild(0).GetComponent<CanvasGroup>();
         trueUI = transform.GetChild(1).GetComponent<CanvasGroup>();
         buttonAct = transform.GetChild(2).GetComponent<Button>();
@@ -25,8 +32,8 @@ public class ScoringManager : MonoBehaviour
         apiManagerR.id = id;
         apiManagerR.lobbyCode = lobbyCode;
         apiManagerR.WaitID();
-    }
 
+    }
     // Update is called once per frame
     void Update()
     {
