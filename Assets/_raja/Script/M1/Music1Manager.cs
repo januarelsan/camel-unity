@@ -63,8 +63,10 @@ public class Music1Manager : MonoBehaviour
     public void EndSeq() {
         //animatorSq.SetTrigger("Calls");
         
-        ApiManagerR managerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();
-        managerR.DirectLink();
+        //ApiManagerR managerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();
+        //managerR.DirectLink();
+        ScoringManager scoringManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoringManager>();
+        scoringManager.DecisionMaking(true);
 
     }
 

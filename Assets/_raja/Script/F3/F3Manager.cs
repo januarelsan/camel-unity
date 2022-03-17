@@ -15,12 +15,19 @@ public class F3Manager : MonoBehaviour
     {
         
     }
-    public void DoAct()
+    public void DoAct(bool stat)
     {
-        Debug.Log("linked2");
-        ApiManagerR apiManagerR;
-        apiManagerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();
-        apiManagerR.DirectLinkparam();
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            //transform.GetChild(i).GetComponent<BoxCollider>().enabled = false;
 
+        }
+
+        //Debug.Log("linked2");
+        //ApiManagerR apiManagerR;
+        //apiManagerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();
+        //apiManagerR.DirectLinkparam();
+        ScoringManager scoringManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoringManager>();
+        scoringManager.DecisionMaking(stat);
     }
 }

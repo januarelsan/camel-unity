@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Main/Scenes/Login.unity
     guid: 8367be2ed4c06854b94872ff67759a2a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/New Scene.unity
     guid: d460384b6af64cc43a2282eb4a604282
   - enabled: 0
@@ -44,7 +44,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Selfie.unity
     guid: ed09dd6c8c3a7aa488dc5add9c268847
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Q1.unity
     guid: dce17f2e6802ff0478371228b26f2479
   - enabled: 0
@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Q6.unity
     guid: 7d7196f299eea6841bd6427c01710cd6
+  - enabled: 0
+    path: Assets/Scenes/6Mark.unity
+    guid: e35d1b8346187ea49a55052a52ffe184
   m_configObjects: {}

@@ -15,4 +15,8 @@ public class F1Manager : MonoBehaviour
     {
         
     }
+    public void DoAct(bool stat) {
+        ScoringManager scoringManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoringManager>();
+        scoringManager.DecisionMaking(stat);
+    }
 }

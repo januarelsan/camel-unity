@@ -77,11 +77,19 @@ public class Fasion1Manager : MonoBehaviour
         }
     }
 
-    public void DoAct()
+    public void DoAct(bool stat)
     {
-        ApiManagerR apiManagerR;
-        apiManagerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();
-        apiManagerR.DirectLinkparam();
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<BoxCollider>().enabled = false;
+
+        }
+        //ApiManagerR apiManagerR;
+        //apiManagerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();
+        //apiManagerR.DirectLinkparam();
+        ScoringManager scoringManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoringManager>();
+        scoringManager.DecisionMaking(stat);
+
 
     }
 

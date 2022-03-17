@@ -13,7 +13,7 @@ public class Music3Manager : MonoBehaviour
     public List<Sprite> sprites;
     public Image refs;
     public ScoringManager scoringManager;
-
+    public bool isM3;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,8 @@ public class Music3Manager : MonoBehaviour
             box.enabled = false;
         }
         if (blinkAnimation) {
-        GetComponent<Image>().DOFade(0, 0);
+            //GetComponent<Image>().DOFade(0, 0);
+            transform.GetComponent<CanvasGroup>().DOFade(0, 0f);
 
             DoBlink();
         
@@ -50,14 +51,20 @@ public class Music3Manager : MonoBehaviour
         }
     }
     public void DoBlink() {
-        float rands = Random.Range(0, 5);
-        GetComponent<Image>().DOFade(1, .5f).SetDelay(rands).OnComplete(delegate {
-            float randss = Random.Range(0, 5);
-            GetComponent<Image>().DOFade(0, .5f).SetDelay(randss).OnComplete(delegate {
+        //float rands = Random.Range(0, 5);
+        //GetComponent<Image>().DOFade(1, .5f).SetDelay(rands).OnComplete(delegate {
+        //    float randss = Random.Range(0, 5);
+        //    GetComponent<Image>().DOFade(0, .5f).SetDelay(randss).OnComplete(delegate {
 
-                DoBlink();
-            });
-           
+        //        DoBlink();
+        //    });
+
+        //});
+        transform.GetComponent<CanvasGroup>().DOFade(0, 0f);
+
+        transform.DOLocalMoveY(-0.37f, 0f).OnComplete(delegate {
+            transform.DOLocalMoveY(0, 2f);
+            transform.GetComponent<CanvasGroup>().DOFade(1, 2f);
         });
     }
 

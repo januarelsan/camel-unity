@@ -17,6 +17,8 @@ public class tapbutton : MonoBehaviour
     [SerializeField]
     public F2Manager f2Manager;
     public F3Manager f3Manager;
+    public Q5Manager q5;
+    public Q4 q4;
 
 
 
@@ -84,26 +86,39 @@ public class tapbutton : MonoBehaviour
             }
             else if (f1Manager != null)
             {
-                f1Manager.DoAct();
+                f1Manager.DoAct(isCorrectAns);
             }
             else if (f2Manager != null)
             {
                 Debug.Log("linked1");
 
-                f2Manager.DoAct();//
+                f2Manager.DoAct(isCorrectAns);//
             }
             else if (f3Manager != null)
             {
                
 
-                f3Manager.DoAct();//
+                f3Manager.DoAct(isCorrectAns);//
             }
+            else if (q5 != null)
+            {
+
+
+                q5.DoAct(isCorrectAns);//
+            }
+
             //else if (f3Manager != null)
             //{
 
 
             //    f3Manager.DoAct();//
             //}
+            else if (q4 != null)
+            {
+
+
+                q4.DoAct(isCorrectAns);//
+            }
         }
         else {
             //apiManagerR.DirectLinkparam();
@@ -112,7 +127,13 @@ public class tapbutton : MonoBehaviour
             {
                 Debug.Log("linked1");
 
-                f2Manager.DoAct();//
+                f2Manager.DoAct(isCorrectAns);//
+            }
+            else if (q4 != null)
+            {
+
+
+                q4.DoAct(isCorrectAns);//
             }
         }
     }
