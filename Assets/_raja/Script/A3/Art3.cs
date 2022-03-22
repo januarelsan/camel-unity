@@ -68,7 +68,7 @@ public class Art3 : MonoBehaviour
             
 
         if (countAnswer == 5) {
-            if (correctAnswer == 5)
+            if (correctAnswer >= 3)
             {
                 //benar
                 scoringManager.DecisionMaking(true);

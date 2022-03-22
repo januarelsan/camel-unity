@@ -26,7 +26,7 @@ public class BtnDetections : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("enters");
+        //Debug.Log("enters");
         if (collision.gameObject.tag == "border")
         {
             stat = true;
@@ -74,14 +74,14 @@ public class BtnDetections : MonoBehaviour
             gameObject.GetComponent<Button>().interactable = false;
             if (stat == true && miss == false & outBorder == false)
             {
-                Debug.Log("Hit True");
+                //Debug.Log("Hit True");
                 //GameObject.FindGameObjectWithTag("Manager").GetComponent<Music1Manager>().score += 5;
                 GameObject.FindGameObjectWithTag("Manager").GetComponent<Music1Manager>().AddPoint();
                 GameObject.FindGameObjectWithTag("Manager").GetComponent<Music1Manager>().TrueFalseLine(kindColors.ToString(), stat);
             }
             else
             {
-                Debug.Log("Hit False");
+                //Debug.Log("Hit False");
                 GameObject.FindGameObjectWithTag("Manager").GetComponent<Music1Manager>().TrueFalseLine(kindColors.ToString(), stat);
             }
             hadAction = true;

@@ -23,6 +23,10 @@ public class rotate : MonoBehaviour
     {
         ReRotate();
     }
+    private void OnDisable()
+    {
+        transform.DOKill();
+    }
     // Update is called once per frame
     void Update()
     {

@@ -15,6 +15,7 @@ public class Q4 : MonoBehaviour
     public ScoringManager scoringManager;
     public bool isM3;
     public Q4 q4;
+    public List<Image> images;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -96,5 +97,21 @@ public class Q4 : MonoBehaviour
             box.enabled = false;
         }
     }
+    public void StartAnimation() {
+        images[0].transform.DOKill();
+        images[1].transform.DOKill();
+        float durations = .8f;
+        images[0].transform.DOScale(0, 0);
+        images[1].transform.DOScale(0, 0).OnComplete(delegate {
+            images[0].transform.DOScale(1, durations).OnComplete(delegate {
+                images[1].transform.DOScale(1, durations).OnComplete(delegate {
 
+
+                });
+
+            });
+
+        });
+    
+    }
 }

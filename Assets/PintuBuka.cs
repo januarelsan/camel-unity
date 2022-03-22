@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SimpleHTTP;
+using UnityEngine.SceneManagement;
 
 public class PintuBuka : MonoBehaviour
 {
@@ -33,22 +34,35 @@ public class PintuBuka : MonoBehaviour
         if (isEnable)
         {
             doorMat.mainTexture = doorTex;
-            // anim.SetTrigger("pintu");
-            // door.SetActive(true);
+            anim.SetTrigger("pintu");
+            door.SetActive(true);
 
-            List<string> parameter_id = new List<string>();                                 
-            parameter_id.Add("20");
+            Invoke("Delayss", 1);
 
-            
-            identity_no = PlayerPrefController.Instance.GetIdentityNumber();
-            Debug.Log(identity_no);
-            APIController.Instance.Get("link/get", CallGetLinkLobbyAPIResponse, parameter_id);
+            //List<string> parameter_id = new List<string>();                                 
+            //parameter_id.Add("20");
+
+
+            //identity_no = PlayerPrefController.Instance.GetIdentityNumber();
+            //Debug.Log(identity_no);
+            //APIController.Instance.Get("link/get", CallGetLinkLobbyAPIResponse, parameter_id);
 
         }
             //m_Mat.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
             //SceneManager.LoadScene("lobby");
     }
+    public void Delayss() {
+        List<string> parameter_id = new List<string>();
+        parameter_id.Add("20");
 
+
+        identity_no = PlayerPrefController.Instance.GetIdentityNumber();
+        Debug.Log(identity_no);
+        //APIController.Instance.Get("link/get", CallGetLinkLobbyAPIResponse, parameter_id);//
+
+        SceneManagers sceneManager = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SceneManagers>();
+        sceneManager.GoToScene("ArtPilar1");
+    }
     void CallGetLinkLobbyAPIResponse(Client http)
     {
 

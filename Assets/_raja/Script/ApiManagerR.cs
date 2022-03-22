@@ -16,6 +16,7 @@ public class ApiManagerR : MonoBehaviour
     public Text textResult;
     public string id;
     public string lobbyCode;
+    public string nameDirectScene;
 
     void Start()
     {
@@ -54,9 +55,11 @@ public class ApiManagerR : MonoBehaviour
         parameters.Add(gameID);
         parameters.Add(lobbyCode);
         parameters.Add(id);
-        LinkItemController.Instance.CallGetLinkAPI(parameters);
-//        APIController.Instance.Get("link/get", CallGetLinkAPIResponse, parameters);
-        
+        //LinkItemController.Instance.CallGetLinkAPI(parameters);
+
+        //        APIController.Instance.Get("link/get", CallGetLinkAPIResponse, parameters);
+        SceneManagers sceneManager = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SceneManagers>();
+        sceneManager.GoToScene(nameDirectScene);
     }
 
     void CallGetLinkAPIResponse(Client http)

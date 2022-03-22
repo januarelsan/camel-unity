@@ -159,7 +159,8 @@ namespace WebGLSupport
         {
             var rect = GetScreenCoordinates(input.RectTransform());
             // モバイルの場合、強制表示する
-            if (showHtmlElement || Application.isMobilePlatform)
+            //if (showHtmlElement || Application.isMobilePlatform)
+            if (showHtmlElement)
             {
                 var x = (int)(rect.x);
                 var y = (int)(Screen.height - (rect.y + rect.height));

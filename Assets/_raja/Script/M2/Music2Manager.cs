@@ -49,7 +49,7 @@ public class Music2Manager : MonoBehaviour
             if (isAnswer == false)
             {
                 imageQuestion.sprite = questionDefault;
-                Debug.Log(imageQuestion.sprite.name);
+                //Debug.Log(imageQuestion.sprite.name);
                 btnStart.gameObject.SetActive(true);
                 canvasAnswer.interactable = false;
             }
@@ -64,7 +64,7 @@ public class Music2Manager : MonoBehaviour
             if (isAnswer == false)
             {
                 //imageQuestion.sprite = questionDefault;
-                Debug.Log(imageQuestion.sprite.name);
+               // Debug.Log(imageQuestion.sprite.name);
                 canvasAnswer.interactable = true;
             }
             else
@@ -141,10 +141,10 @@ public class Music2Manager : MonoBehaviour
             StopCoroutine("PlayQuestionSequence");
             if (isAnswer == false)
             {
-                Debug.Log("ssss");
+                //Debug.Log("ssss");
 
                 imageQuestion.sprite = questionDefault;
-                Debug.Log(imageQuestion.sprite.name);
+                //Debug.Log(imageQuestion.sprite.name);
                 btnStart.gameObject.SetActive(true);
                 canvasAnswer.interactable = false;
             }
@@ -152,7 +152,7 @@ public class Music2Manager : MonoBehaviour
             if (playAudios)
             {
                 source.Stop();
-                Debug.Log("dddd");
+                //Debug.Log("dddd");
 
             }
 
@@ -206,7 +206,7 @@ public class Music2Manager : MonoBehaviour
                 imageQuestion.sprite = listQuestion[rands];
 
                 //curIndex++;
-                Debug.Log(imageQuestion.sprite.name);
+                //Debug.Log(imageQuestion.sprite.name);
                 yield return new WaitForSeconds(delay);
                 StartCoroutine("PlayQuestionSequence");
             }

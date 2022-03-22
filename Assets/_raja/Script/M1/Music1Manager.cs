@@ -45,13 +45,13 @@ public class Music1Manager : MonoBehaviour
             animatiorTransform[i].DOMoveY(startPos[i].position.y, 0);
             animatiorTransform[i].DOKill();
             
-            Debug.Log(animatiorTransform[i].gameObject.name);
+            //Debug.Log(animatiorTransform[i].gameObject.name);
         }
 
         for (int i = 0; i < animatiorTransform.Count; i++)
         {
             animatiorTransform[i].DOMoveY(endPos[i].position.y, 27).SetEase(Ease.Linear).SetDelay(3.2f);
-            Debug.Log(animatiorTransform[i].gameObject.name);
+            //Debug.Log(animatiorTransform[i].gameObject.name);
 
         }
 

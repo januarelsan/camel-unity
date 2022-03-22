@@ -12,17 +12,21 @@ public class CameraDetection : MonoBehaviour
     [SerializeField] Texture2D pintuTextureDefault;
     public bool isFinish;
     [SerializeField] List<ContentHoF> contentHoFs = new List<ContentHoF>();
+    public GameObject lightDoor;
     // Start is called before the first frame update
     void Start()
     {
         cam = GetComponent<Camera>();
         pintu.mainTexture = pintuTextureDefault;
         pintu.SetTexture("_EmissionMap", pintuTextureDefault);
+        lightDoor.SetActive(false);
     }
     public void OnDestroy()
     {
         pintu.mainTexture = pintuTextureDefault;
         pintu.SetTexture("_EmissionMap", pintuTextureDefault);
+        //lightDoor.SetActive(false);
+
     }
     // Update is called once per frame
     void Update()
@@ -46,6 +50,8 @@ public class CameraDetection : MonoBehaviour
                 pintu.mainTexture = pintuTexture;
                              
                 pintu.SetTexture("_EmissionMap", pintuTexture);
+                lightDoor.SetActive(true);
+
                 isFinish = true;
             }
         }
