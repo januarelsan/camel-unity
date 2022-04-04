@@ -21,11 +21,14 @@ public class SceneManagers : MonoBehaviour
         nameDirectScene = sceneName;
         Resources.UnloadUnusedAssets();
         System.GC.Collect();
-        StartCoroutine("LoadYourAsyncScene");
-        //SceneManager.LoadScene(nameDirectScene);
 
+        Invoke("ChangeScene", 1);
     }
+    public void ChangeScene() {
 
+        //StartCoroutine("LoadYourAsyncScene");
+        SceneManager.LoadScene(nameDirectScene);
+    }
     IEnumerator LoadYourAsyncScene()
     {
         // The Application loads the Scene in the background as the current Scene runs.

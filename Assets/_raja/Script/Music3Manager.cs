@@ -27,6 +27,7 @@ public class Music3Manager : MonoBehaviour
             DoBlink();
         
         }
+        clip.LoadAudioData();
     }
 
     // Update is called once per frame
@@ -45,6 +46,8 @@ public class Music3Manager : MonoBehaviour
     public void StopSound()
     {
         source.Stop();
+        clip.UnloadAudioData();
+
         foreach (BoxCollider box in boxCollider)
         {
             box.enabled = false;

@@ -99,6 +99,7 @@ public class Q5Manager : MonoBehaviour
 
     }
     public void DoAct(bool stat) {
+        Debug.Log(stat);
         for (int i = 0; i < listOfObj.Count; i++)
         {
             listOfObj[i].GetChild(0).GetChild(0).GetComponent<BoxCollider>().enabled = false;

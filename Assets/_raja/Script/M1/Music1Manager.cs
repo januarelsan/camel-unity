@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 public class Music1Manager : MonoBehaviour
 {
+    public GameObject canvasMain;
     public Button StartButton;
     public List<Animator> animators;
     public Animator animatorSq;
@@ -24,11 +25,26 @@ public class Music1Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartButton.GetComponent<CanvasGroup>().alpha = 1;
-        StartButton.GetComponent<CanvasGroup>().interactable = true;
-        StartButton.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        Invoke("StartCount", .5f);
+        clip.LoadAudioData();
     }
+    public void StartCount() {
+        //canvasMain.SetActive(false);
+        canvasMain.SetActive(true);
+        canvasMain.GetComponent<CanvasGroup>().DOFade(0, 0);
 
+        canvasMain.GetComponent<CanvasGroup>().DOFade(1, 1f);
+
+        StartButton.GetComponent<CanvasGroup>().DOFade(1, .5f).OnComplete(delegate {
+            StartButton.GetComponent<CanvasGroup>().interactable = true;
+            StartButton.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        });
+        //
+        
+    }
+    public void DeactiveCanvas() {
+        canvasMain.SetActive(false);
+    }
     public void StartAnimation() {
         StartButton.GetComponent<CanvasGroup>().alpha = 0;
         StartButton.GetComponent<CanvasGroup>().interactable = false;
@@ -62,9 +78,23 @@ public class Music1Manager : MonoBehaviour
     }
     public void EndSeq() {
         //animatorSq.SetTrigger("Calls");
-        
+        source.Stop();
+        clip.UnloadAudioData();
         //ApiManagerR managerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();
         //managerR.DirectLink();
+        for (int i = 0; i < animatiorTransform.Count; i++)
+        {
+            animatiorTransform[i].DOKill();
+            //Debug.Log(animatiorTransform[i].gameObject.name);
+
+        }
+        blueTrue.DOKill();
+        blueFalse.DOKill();
+        greenTrue.DOKill();
+        greenFalse.DOKill();
+        orangeTrue.DOKill();
+        orangeFalse.DOKill();
+
         ScoringManager scoringManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoringManager>();
         scoringManager.DecisionMaking(true);
 

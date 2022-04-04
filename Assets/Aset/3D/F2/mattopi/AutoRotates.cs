@@ -8,12 +8,23 @@ public class AutoRotates : MonoBehaviour
     public float durations;
     void Start()
     {
-        transform.DOLocalRotate(new Vector3(0,0, 359), durations, RotateMode.FastBeyond360).SetLoops(-1,LoopType.Restart).SetEase(Ease.Linear);
+        //transform.DOLocalRotate(new Vector3(0,0, 359), durations, RotateMode.FastBeyond360).SetLoops(-1,LoopType.Restart).SetEase(Ease.Linear);
+        doAnimates();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    void doAnimates() { 
+        transform.DOLocalRotate(new Vector3(transform.localRotation.x, transform.localRotation.y, 359), durations, RotateMode.FastBeyond360).SetLoops(-1,LoopType.Restart).SetEase(Ease.Linear);
+
+
+    }
+    public void OnDestroy() {
+        transform.DOKill();
+
+
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class A1Manager : MonoBehaviour
 {
     // Start is called before the first frame update
+    public List<GameObject> listGB;
     void Start()
     {
         
@@ -17,6 +18,10 @@ public class A1Manager : MonoBehaviour
     }    
     public void DoActions(bool stat)
     {
+        foreach (GameObject gb in listGB) {
+            gb.GetComponent<BoxCollider>().enabled = false;
+        
+        }
         ScoringManager scoringManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoringManager>();
         scoringManager.DecisionMaking(stat);
     }

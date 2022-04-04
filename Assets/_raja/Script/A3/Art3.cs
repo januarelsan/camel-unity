@@ -26,7 +26,7 @@ public class Art3 : MonoBehaviour
         objectss.GetComponent<BoxCollider>().enabled = false;
 
         Debug.Log(answers);
-        Debug.Log(objectss.name);
+//        Debug.Log(objectss.name);
         Vector3 nexpos;
         nexpos = vector3;
         CanvasGroup canvasGroup = objectss.GetChild(0).GetChild(0).GetComponent<CanvasGroup>();

@@ -19,6 +19,7 @@ public class tapbutton : MonoBehaviour
     public F3Manager f3Manager;
     public Q5Manager q5;
     public Q4 q4;
+    public Q1Manager q1;
 
 
 
@@ -119,6 +120,12 @@ public class tapbutton : MonoBehaviour
 
                 q4.DoAct(isCorrectAns);//
             }
+            else if (q1 != null)
+            {
+
+
+                q1.DoAct(isCorrectAns);//
+            }
         }
         else {
             //apiManagerR.DirectLinkparam();
@@ -134,6 +141,12 @@ public class tapbutton : MonoBehaviour
 
 
                 q4.DoAct(isCorrectAns);//
+            }
+            else if (q5 != null)
+            {
+
+
+                q5.DoAct(isCorrectAns);//
             }
         }
     }

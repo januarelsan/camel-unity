@@ -17,16 +17,16 @@ public class Music2Manager : MonoBehaviour
     public Image imageResult;
     public Button btnStart;
     public CanvasGroup canvasAnswer;
-    public AudioSource source;
+    //public AudioSource source;
     public bool isAnswer;
-    [SerializeField] public AudioClip clip;
+    //[SerializeField] public AudioClip clip;
     public bool allowPlay;
     public bool playAudios;
     public ScoringManager scoringManager;
+    public M2AudioManager m2Audio;
     void Start()
     {
-        Color colors = Color.white;
-        colors.a = 0f;
+
         //imageResult.color = colors;
         btnStart.gameObject.SetActive(true);
         //canvasAnswer.interactable = false;
@@ -36,6 +36,9 @@ public class Music2Manager : MonoBehaviour
             btnStart.gameObject.SetActive(false);
             //PlayBTN();
         }
+
+        m2Audio = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<M2AudioManager>();
+
     }
 
     // Update is called once per frame
@@ -120,8 +123,9 @@ public class Music2Manager : MonoBehaviour
         //source.Play();
 
         if (playAudios) {
-            source.clip = clip;
-            source.Play();
+            //source.clip = clip;
+            //source.Play();
+            m2Audio.PlaySong();
         }
         
         allowPlay = true;
@@ -151,7 +155,9 @@ public class Music2Manager : MonoBehaviour
 
             if (playAudios)
             {
-                source.Stop();
+                //source.Stop();
+
+                m2Audio.StopSong();
                 //Debug.Log("dddd");
 
             }
@@ -194,7 +200,7 @@ public class Music2Manager : MonoBehaviour
         //}
         if (playAudios)
         {
-            if (allowPlay == true && source.isPlaying == true)
+            if (allowPlay == true && m2Audio.source.isPlaying == true)
             {
                 int rands = Randoms(curIndex);
                 curIndex = rands;
@@ -210,7 +216,7 @@ public class Music2Manager : MonoBehaviour
                 yield return new WaitForSeconds(delay);
                 StartCoroutine("PlayQuestionSequence");
             }
-            else if (allowPlay == false && source.isPlaying == true)
+            else if (allowPlay == false && m2Audio.source.isPlaying == true)
             {
                 imageQuestion.sprite = questionDefault;
                 //btnStart.gameObject.SetActive(true);
@@ -236,7 +242,7 @@ public class Music2Manager : MonoBehaviour
             {
                 
             }
-            else if (allowPlay == false && source.isPlaying == true)
+            else if (allowPlay == false && m2Audio.source.isPlaying == true)
             {
                 imageQuestion.sprite = questionDefault;
                 //btnStart.gameObject.SetActive(true);
@@ -296,6 +302,7 @@ public class Music2Manager : MonoBehaviour
         isAnswer = true;
         canvasAnswer.interactable = false;
         StopQuestion();
+        m2Audio.EndScene();
         //EndSeq();
     }
 
