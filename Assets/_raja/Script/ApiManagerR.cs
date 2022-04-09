@@ -42,7 +42,16 @@ public class ApiManagerR : MonoBehaviour
         }
 
         //StartCoroutine("GetLink");
-        StartGame();
+
+
+        //Check semua player sudah selesai di game yg sama
+        if(FinishedGameController.Instance.GetAllUserOnSameGame()){
+            
+            StartGame();
+
+        }
+        
+
 
 
         //Application.OpenURL(url);
