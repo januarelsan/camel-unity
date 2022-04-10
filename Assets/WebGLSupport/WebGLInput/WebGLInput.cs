@@ -159,8 +159,7 @@ namespace WebGLSupport
         {
             var rect = GetScreenCoordinates(input.RectTransform());
             // モバイルの場合、強制表示する
-            //if (showHtmlElement || Application.isMobilePlatform)
-            if (showHtmlElement)
+            if (showHtmlElement || Application.isMobilePlatform)
             {
                 var x = (int)(rect.x);
                 var y = (int)(Screen.height - (rect.y + rect.height));
@@ -169,7 +168,7 @@ namespace WebGLSupport
             else
             {
                 var x = (int)(rect.x);
-                var y = (int)(Screen.height + 100 + (rect.y));
+                var y = (int)(Screen.height - (rect.y));
                 return new RectInt(x, y, (int)rect.width, (int)1);
             }
         }
@@ -188,7 +187,8 @@ namespace WebGLSupport
 
             // モバイルの場合、強制表示する
             var isHidden = !(showHtmlElement || Application.isMobilePlatform);
-            id = WebGLInputPlugin.WebGLInputCreate(WebGLInput.CanvasId, rect.x, rect.y, rect.width, rect.height, fontSize, input.text, input.placeholder, input.lineType != LineType.SingleLine, isPassword, isHidden, Application.isMobilePlatform);
+            //id = WebGLInputPlugin.WebGLInputCreate(WebGLInput.CanvasId, rect.x, rect.y, rect.width, rect.height, fontSize, input.text, input.placeholder, input.lineType != LineType.SingleLine, isPassword, isHidden, Application.isMobilePlatform);
+            id = WebGLInputPlugin.WebGLInputCreate(WebGLInput.CanvasId, rect.x, rect.y, rect.width, rect.height, fontSize, input.text, input.placeholder, input.lineType != LineType.SingleLine, isPassword, isHidden, false);
 
             instances[id] = this;
             WebGLInputPlugin.WebGLInputEnterSubmit(id, input.lineType != LineType.MultiLineNewline);
@@ -196,12 +196,12 @@ namespace WebGLSupport
             WebGLInputPlugin.WebGLInputOnBlur(id, OnBlur);
             WebGLInputPlugin.WebGLInputOnValueChange(id, OnValueChange);
             WebGLInputPlugin.WebGLInputOnEditEnd(id, OnEditEnd);
-      /*//-> */       WebGLInputPlugin.WebGLInputTab(id, OnTab);
+            WebGLInputPlugin.WebGLInputTab(id, OnTab);
             // default value : https://www.w3schools.com/tags/att_input_maxlength.asp
             WebGLInputPlugin.WebGLInputMaxLength(id, (input.characterLimit > 0) ? input.characterLimit : 524288);
             WebGLInputPlugin.WebGLInputFocus(id);
 #if WEBGLINPUT_TAB
-        /*//-> */   WebGLInputPlugin.WebGLInputEnableTabText(id, enableTabText);
+            WebGLInputPlugin.WebGLInputEnableTabText(id, enableTabText);
 #endif
             if (input.OnFocusSelectAll)
             {
@@ -213,7 +213,7 @@ namespace WebGLSupport
 
         void OnWindowBlur()
         {
-            blurBlock = false;
+            blurBlock = true;
         }
 
         /// <summary>

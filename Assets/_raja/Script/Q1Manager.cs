@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class Q1Manager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Q1Manager : MonoBehaviour
     public GameObject rope;
     public bool allowShow;
     public List<Transform> listOfObj;
+    public GameObject tracker;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,9 @@ public class Q1Manager : MonoBehaviour
         Vector3 refe = cameras.WorldToScreenPoint(transformsss.position);//
         //Debug.Log(refe);
         referTo.localPosition = new Vector2(referTo.localPosition.x, (refe.y - Screen.height/2));
+        //referTo.Rotate(Quaternion.(new Vector3(referTo.localRotation.x, referTo.localRotation.y, refe.z)), 0f);
+        referTo.DOLocalRotate((new Vector3(referTo.localRotation.x, referTo.localRotation.y, -1*tracker.transform.rotation.z)), 0);
+
         if (allowShow) {
             Invoke("ReRefer", 0);
         }

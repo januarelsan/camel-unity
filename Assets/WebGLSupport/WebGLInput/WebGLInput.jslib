@@ -50,8 +50,8 @@ var WebGLInput = {
 			input.style.fontSize = fontsize + "px";
 		}
 
-		input.style.outlineWidth = 0 + 'px';
-		input.style.opacity = 0.05;
+		input.style.outlineWidth = 1 + 'px';
+		input.style.opacity = isHidden?0:1;
 		input.style.resize = 'none'; // for textarea
 		input.style.padding = '0px 1px';
 		input.style.cursor = "default";
@@ -128,14 +128,16 @@ var WebGLInput = {
 	WebGLInputOnValueChange:function(id, cb){
         var input = instances[id];
         input.oninput = function () {
-			var value = allocate(intArrayFromString(input.value), 'i8', ALLOC_NORMAL);
+			var intArray = intArrayFromString(input.value);
+            var value = (allocate.length <= 2) ? allocate(intArray, ALLOC_NORMAL):allocate(intArray, 'i8', ALLOC_NORMAL);
             Runtime.dynCall("vii", cb, [id,value]);
         };
     },
 	WebGLInputOnEditEnd:function(id, cb){
         var input = instances[id];
         input.onchange = function () {
-			var value = allocate(intArrayFromString(input.value), 'i8', ALLOC_NORMAL);
+			var intArray = intArrayFromString(input.value);
+            var value = (allocate.length <= 2) ? allocate(intArray, ALLOC_NORMAL):allocate(intArray, 'i8', ALLOC_NORMAL);
             Runtime.dynCall("vii", cb, [id,value]);
         };
     },
