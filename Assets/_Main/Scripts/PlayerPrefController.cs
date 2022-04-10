@@ -19,4 +19,12 @@ public class PlayerPrefController : Singleton<PlayerPrefController>
     public string GetLobbyCode(){
         return PlayerPrefs.GetString("lobbyCode");
     }
+
+    public void SetCurrentGameID(int index){
+        PlayerPrefs.SetInt("currentGameID",index);
+    }
+
+    public int GetCurrentGameID(){
+        return PlayerPrefs.GetInt("currentGameID",0);
+    }
 }

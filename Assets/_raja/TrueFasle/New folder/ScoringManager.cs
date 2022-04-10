@@ -17,6 +17,7 @@ public class ScoringManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(gameObject.name);
         if (notDoCheck == false) {
             DoCheck();
         }
@@ -41,6 +42,12 @@ public class ScoringManager : MonoBehaviour
     }
 
     public void DecisionMaking(bool status) {
+
+
+        //Finish this game, and setup next game
+        FinishedGameController.Instance.SetupNextGame();
+        FinishedGameController.Instance.CheckAllUserFinished();
+
         CanvasGroup currectCG;
         Debug.Log(status);
         if (status == true)
