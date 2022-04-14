@@ -27,4 +27,15 @@ public class PlayerPrefController : Singleton<PlayerPrefController>
     public int GetCurrentGameID(){
         return PlayerPrefs.GetInt("currentGameID",0);
     }
+
+    public void SetStatusGame(int index)
+    {
+        PlayerPrefs.SetInt("isMultiplayer", index);
+    }
+
+    public int GetStatusGame()
+    {
+        return PlayerPrefs.GetInt("isMultiplayer", 0);
+    }
+
 }

@@ -32,7 +32,7 @@ public class LobbyHomeController : MonoBehaviour
             if(i < lobby.joined_identities.Length){
                 userNameTexts[i].text = lobby.joined_identities[i].fullname;
             } else {
-                userNameTexts[i].text = "Empty";
+                userNameTexts[i].text = "Waiting Other Player ";
             }
         }
     }
@@ -42,7 +42,9 @@ public class LobbyHomeController : MonoBehaviour
     public void StartGame(){                
         // Debug.Log("Start: " + PlayerPrefController.Instance.GetLobbyCode());
         CallLobbyStartAPI(PlayerPrefController.Instance.GetLobbyCode());
-    }    
+        //SceneManager.LoadScene(3);
+
+    }
 
     public void CallLobbyStartAPI(string lobbyCode){
 
@@ -51,8 +53,8 @@ public class LobbyHomeController : MonoBehaviour
         parameters.Add("code", lobbyCode);
         parameters.Add("identity_no", PlayerPrefController.Instance.GetIdentityNumber());
         
-        APIController.Instance.PostWithFormData("lobby/start",CallLobbyStartAPIResponse, parameters);
-
+        //APIController.Instance.PostWithFormData("lobby/start",CallLobbyStartAPIResponse, parameters);
+        SceneManager.LoadScene(3);
     }
 
     void CallLobbyStartAPIResponse(Client http)

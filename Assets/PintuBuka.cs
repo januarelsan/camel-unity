@@ -61,7 +61,8 @@ public class PintuBuka : MonoBehaviour
         //APIController.Instance.Get("link/get", CallGetLinkLobbyAPIResponse, parameter_id);//
 
         SceneManagers sceneManager = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SceneManagers>();
-        sceneManager.GoToScene("ArtPilar1");
+       // sceneManager.GoToScene("ArtPilar1");
+        sceneManager.GoToScene("Lobby");
     }
     void CallGetLinkLobbyAPIResponse(Client http)
     {

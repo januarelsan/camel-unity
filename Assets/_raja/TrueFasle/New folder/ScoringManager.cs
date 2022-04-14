@@ -18,6 +18,9 @@ public class ScoringManager : MonoBehaviour
     void Start()
     {
         Debug.Log(gameObject.name);
+        Debug.Log(PlayerPrefs.GetString("lobbyCode"));
+        Debug.Log(PlayerPrefs.GetInt("currentGameID"));
+
         if (notDoCheck == false) {
             DoCheck();
         }

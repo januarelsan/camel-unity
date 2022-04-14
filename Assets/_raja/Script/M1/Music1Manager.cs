@@ -51,6 +51,7 @@ public class Music1Manager : MonoBehaviour
         StartButton.GetComponent<CanvasGroup>().blocksRaycasts = false;
         //source.Play();
         source.clip = clip;
+        source.ignoreListenerVolume = true;
         source.Play();
         // doing animation
         //animatorSq.SetTrigger("Start");

@@ -30,12 +30,12 @@ public class LobbyController : Singleton<LobbyController>
         #if UNITY_EDITOR
 
             // PlayerPrefs.DeleteAll();
-            PlayerPrefController.Instance.SetIdentityNumber("7306081201950010");            
+            //PlayerPrefController.Instance.SetIdentityNumber("7306081201950010");            
 
         #else
             
             if( URLGetter.Instance.GetParam("identity_no") != "" ){
-                PlayerPrefController.Instance.SetIdentityNumber(URLGetter.Instance.GetParam("identity_no"));            
+                //PlayerPrefController.Instance.SetIdentityNumber(URLGetter.Instance.GetParam("identity_no"));            
             }
 
         #endif

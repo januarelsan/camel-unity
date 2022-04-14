@@ -7,6 +7,8 @@ public class HofManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<MeshRenderer>().enabled = true ;
+
         Invoke("RemoveShader", 5);   
     }
 
@@ -16,7 +18,9 @@ public class HofManager : MonoBehaviour
         
     }
     public void RemoveShader() {
-        GetComponent<MeshRenderer>().material.DOFade(0, 1);
-    
+        GetComponent<MeshRenderer>().material.DOFade(0, 1).OnComplete(delegate {
+            gameObject.SetActive(false);
+        });
+        
     }
 }

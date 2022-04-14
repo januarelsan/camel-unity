@@ -38,6 +38,11 @@ public class FinishedGameController : Singleton<FinishedGameController>
         
         APIController.Instance.PostWithFormData("lobby/game/save/finished",CallLobbyGameSaveFinishedAPIResponse, parameters);
     }
+    public void SetupFirstGame()
+    {
+        int nextGameId = 0;
+        PlayerPrefController.Instance.SetCurrentGameID(nextGameId);
+    }
 
     void CallLobbyGameSaveFinishedAPIResponse(Client http)
     {
@@ -57,7 +62,7 @@ public class FinishedGameController : Singleton<FinishedGameController>
         allUserOnSameGame = true;
         if (http.IsSuccessful ()) {
 			Response resp = http.Response ();
-
+            Debug.Log(resp.ToString());
             if(resp.IsOK()){
 
                 string wrappedJSON = resp.WrapJSONArray("lobbies");

@@ -55,6 +55,9 @@ public class LobbyPrivateController : MonoBehaviour
         if (generalResponse.status == "success")
         {
             Lobby lobby = generalResponse.lobby;
+            Debug.Log(lobby.code);
+            PlayerPrefController.Instance.SetLobbyCode(lobby.code);
+
             lobbyHomePanel.SetActive(true);
             lobbyHomePanel.GetComponent<LobbyHomeController>().Setup(lobby);
             gameObject.SetActive(false);

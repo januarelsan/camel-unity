@@ -8,7 +8,11 @@ public class A1Manager : MonoBehaviour
     public List<GameObject> listGB;
     void Start()
     {
-        
+        Debug.Log(PlayerPrefs.GetString("lobbyCode"));
+        FinishedGameController.Instance.SetupFirstGame();
+       
+        int statBool = PlayerPrefController.Instance.GetStatusGame();
+        Debug.Log(statBool);
     }
 
     // Update is called once per frame
