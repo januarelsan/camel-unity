@@ -72,9 +72,16 @@ public class ScoringManager : MonoBehaviour
             //buttonAct.interactable = true;
             //buttonAct.onClick.AddListener(recievers);
         });
+        //Invoke("DoSecondCheck", .5f);
+        InvokeRepeating("DoSecondCheck", .5f, 5f);
+    }
+
+    public void DoSecondCheck() { 
+        FinishedGameController.Instance.CheckAllUserFinished();
 
 
     }
+
 
     public void recievers() {
         ApiManagerR apiManagerR = GameObject.FindGameObjectWithTag("UrlManager").GetComponent<ApiManagerR>();

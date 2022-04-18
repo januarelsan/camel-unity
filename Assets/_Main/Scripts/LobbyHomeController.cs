@@ -25,7 +25,8 @@ public class LobbyHomeController : MonoBehaviour
         
         this.lobby = lobby;
 
-        lobbyNameText.text = lobby.name + " - " + lobby.code;
+        //lobbyNameText.text = lobby.name + " - " + lobby.code;
+        lobbyNameText.text = "ID Room : " + lobby.code;
 
         for (int i = 0; i < userNameTexts.Length; i++)
         {

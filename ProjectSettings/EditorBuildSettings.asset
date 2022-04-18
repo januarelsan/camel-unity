@@ -23,22 +23,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ArtPilar3.unity
     guid: d2eb7a2b742b0ff458936d7404f5ecb1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Fashion1.unity
     guid: 34cdd6e7b4b4263479b872e2b8928ec7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Fashion2.unity
     guid: 4b3ab37c4eb3e9c47bbbbbf61bf5c526
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Fashion3.unity
     guid: 8d66dcce8bb8bb140891188dece26ec1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Music1.unity
     guid: b5850c173e0470e45b8d2eae6c2fafbb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Music2.unity
     guid: bc8cac7d88daf604596f2f8aad62b966
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Music3.unity
     guid: ea99ab439312f424197ae06b2cdf1047
   - enabled: 0

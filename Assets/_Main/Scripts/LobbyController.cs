@@ -42,7 +42,14 @@ public class LobbyController : Singleton<LobbyController>
 
         
     }
+    public void RandomNameRoom() {
+        string nameRoom = Random.Range(0, 100000).ToString();
+        lobbyNameField.text = nameRoom;
+        CallLobbyCreateAPI();
     
+    }
+
+
     public void CallLobbyCreateAPI(){
         Dictionary<string, string> parameters = new Dictionary<string, string>();
         parameters.Add("name", lobbyNameField.text);        
