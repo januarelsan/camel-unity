@@ -9,6 +9,7 @@ public class FinishedGameController : Singleton<FinishedGameController>
 
     [SerializeField] private GameObject gameFinishedUI;
     [SerializeField] private Text messageText;
+    [SerializeField] private Text textRoomId;
 
     private string currentGameID;
 
@@ -24,6 +25,8 @@ public class FinishedGameController : Singleton<FinishedGameController>
 
         // SetupNextGame();
         // CheckAllUserFinished();
+        textRoomId = messageText.transform.parent.GetChild(3).GetComponent<Text>();
+
     }
 
     public void SetupNextGame(){
@@ -35,8 +38,11 @@ public class FinishedGameController : Singleton<FinishedGameController>
         parameters.Add("lobby_code", joinedLobbyId);        
         parameters.Add("finished_game_id", nextGameId.ToString());                
         parameters.Add("identity_no", PlayerPrefController.Instance.GetIdentityNumber());
-        
+
+        textRoomId.text = "ID Room: "+joinedLobbyId;
+
         APIController.Instance.PostWithFormData("lobby/game/save/finished",CallLobbyGameSaveFinishedAPIResponse, parameters);
+    
     }
     public void SetupFirstGame()
     {
