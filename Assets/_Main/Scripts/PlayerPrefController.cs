@@ -38,4 +38,14 @@ public class PlayerPrefController : Singleton<PlayerPrefController>
         return PlayerPrefs.GetInt("isMultiplayer", 0);
     }
 
+    public void SetIsJoinAsOwner(int isOwning)
+    {
+        PlayerPrefs.SetInt("isJoinAsOwner", isOwning);
+    }
+
+    public int GetIsJoinAsOwner()
+    {
+        return PlayerPrefs.GetInt("isJoinAsOwner", 0);
+    }
+
 }
