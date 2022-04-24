@@ -20,6 +20,7 @@ public class tapbutton : MonoBehaviour
     public Q5Manager q5;
     public Q4 q4;
     public Q1Manager q1;
+    public Q6 q6;
 
 
 
@@ -84,6 +85,19 @@ public class tapbutton : MonoBehaviour
                     newPos = falses;
                 }
                 a3Manager.DoScoress(isCorrectAns,transform,newPos);
+            }
+            else if (q6 != null)
+            {
+                Vector3 newPos;
+                if (isCorrectAns == true)
+                {
+                    newPos = corrects;
+                }
+                else
+                {
+                    newPos = falses;
+                }
+                q6.DoScoress(isCorrectAns, transform, newPos);
             }
             else if (f1Manager != null)
             {
