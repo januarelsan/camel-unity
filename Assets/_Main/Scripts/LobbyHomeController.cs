@@ -12,6 +12,8 @@ public class LobbyHomeController : MonoBehaviour
     [SerializeField] private Text lobbyNameText;
     [SerializeField] private Text[] userNameTexts;        
 
+    [SerializeField] private GameObject startGameButtonGO;        
+
     private Lobby lobby;
 
     private string lobbyCode;
@@ -25,6 +27,15 @@ public class LobbyHomeController : MonoBehaviour
         
         this.lobby = lobby;
 
+        if(PlayerPrefController.Instance.GetIsJoinAsOwner() == 1){
+            startGameButtonGO.SetActive(true);
+        }else {
+            startGameButtonGO.SetActive(false);
+            if(this.lobby.status == "success" || this.lobby.status == "1"){
+                StartGame();
+            }
+        }
+        
         //lobbyNameText.text = lobby.name + " - " + lobby.code;
         lobbyNameText.text = "ID Room : " + lobby.code;
 

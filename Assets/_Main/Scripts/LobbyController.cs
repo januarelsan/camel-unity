@@ -83,6 +83,7 @@ public class LobbyController : Singleton<LobbyController>
                 {         
                     Debug.Log(lobby.name);
                     PlayerPrefController.Instance.SetLobbyCode(lobby.code);
+                    PlayerPrefController.Instance.SetIsJoinAsOwner(1);
                     OpenLobbyHome(lobby);
                 }
                 
