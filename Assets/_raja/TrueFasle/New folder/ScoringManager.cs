@@ -47,8 +47,13 @@ public class ScoringManager : MonoBehaviour
     public void DecisionMaking(bool status) {
 
 
-        //Finish this game, and setup next game
-        FinishedGameController.Instance.SetupNextGame();
+        //for Local
+        int nextGameId = PlayerPrefController.Instance.GetCurrentGameID() + 1;
+        PlayerPrefController.Instance.SetCurrentGameID(nextGameId);
+
+        //for server
+        FinishedGameController.Instance.SetupNextGameOnServer();
+
         FinishedGameController.Instance.CheckAllUserFinished();
 
         CanvasGroup currectCG;
@@ -78,6 +83,7 @@ public class ScoringManager : MonoBehaviour
     }
 
     public void DoSecondCheck() { 
+        FinishedGameController.Instance.SetupNextGameOnServer();
         FinishedGameController.Instance.CheckAllUserFinished();
     }
 

@@ -29,10 +29,9 @@ public class FinishedGameController : Singleton<FinishedGameController>
 
     }
 
-    public void SetupNextGame(){
-        int nextGameId = PlayerPrefController.Instance.GetCurrentGameID() + 1;
-        PlayerPrefController.Instance.SetCurrentGameID(nextGameId);
-
+    public void SetupNextGameOnServer(){
+        int nextGameId = PlayerPrefController.Instance.GetCurrentGameID();
+        
         //Update on server
         Dictionary<string, string> parameters = new Dictionary<string, string>();
         parameters.Add("lobby_code", joinedLobbyId);        
@@ -52,7 +51,22 @@ public class FinishedGameController : Singleton<FinishedGameController>
 
     void CallLobbyGameSaveFinishedAPIResponse(Client http)
     {
+        if (http.IsSuccessful ()) {
+			Response resp = http.Response ();
 
+            if(resp.IsOK()){
+                Debug.Log("Saved Game Finished Success");
+                Debug.Log(resp.ToString());                
+                
+                
+            } else {
+                Debug.Log(resp.ToString());                
+            }
+
+		} else {
+			Debug.Log("error: " + http.Error());
+            MessageController.Instance.ShowMessage("Something Error, Please Try Again!");
+		}
     }
 
     public void CheckAllUserFinished(){
