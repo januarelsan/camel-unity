@@ -67,19 +67,18 @@ public class ScoringManager : MonoBehaviour
             parrentCG.blocksRaycasts = true;
             buttonAct.interactable = true;
             buttonAct.onClick.AddListener(recievers);
+            Debug.Log("start attaching");
         }); ;
         currectCG.DOFade(1, .5f).OnComplete(delegate {
             //buttonAct.interactable = true;
             //buttonAct.onClick.AddListener(recievers);
         });
         //Invoke("DoSecondCheck", .5f);
-        InvokeRepeating("DoSecondCheck", .5f, 5f);
+        InvokeRepeating("DoSecondCheck", .5f, 3f);
     }
 
     public void DoSecondCheck() { 
         FinishedGameController.Instance.CheckAllUserFinished();
-
-
     }
 
 

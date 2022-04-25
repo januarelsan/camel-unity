@@ -20,7 +20,7 @@ public class LobbyHomeController : MonoBehaviour
     private string identity_no;
 
     void Start(){
-        InvokeRepeating("CallLobbyJoinedUserListAPI",2,5);
+        InvokeRepeating("CallLobbyJoinedUserListAPI",2,3);
     }
 
     public void Setup(Lobby lobby){
@@ -33,6 +33,7 @@ public class LobbyHomeController : MonoBehaviour
             startGameButtonGO.SetActive(false);
             if(this.lobby.status == "success" || this.lobby.status == "1"){
                 StartGame();
+                Debug.Log("StartCheck");
             }
         }
         
@@ -52,7 +53,7 @@ public class LobbyHomeController : MonoBehaviour
     
 
     public void StartGame(){                
-        // Debug.Log("Start: " + PlayerPrefController.Instance.GetLobbyCode());
+         Debug.Log("Start: " + PlayerPrefController.Instance.GetLobbyCode());
         CallLobbyStartAPI(PlayerPrefController.Instance.GetLobbyCode());
         //SceneManager.LoadScene(3);
 
@@ -65,8 +66,8 @@ public class LobbyHomeController : MonoBehaviour
         parameters.Add("code", lobbyCode);
         parameters.Add("identity_no", PlayerPrefController.Instance.GetIdentityNumber());
         
-        //APIController.Instance.PostWithFormData("lobby/start",CallLobbyStartAPIResponse, parameters);
-        SceneManager.LoadScene(3);
+        APIController.Instance.PostWithFormData("lobby/start",CallLobbyStartAPIResponse, parameters);
+        //SceneManager.LoadScene(3);
     }
 
     void CallLobbyStartAPIResponse(Client http)
@@ -82,13 +83,15 @@ public class LobbyHomeController : MonoBehaviour
                 if(generalResponse.status == "pending"){
                     MessageController.Instance.ShowMessage("Lobby Not Started Yet!");
                 } else {       
-                    List<string> parameter_id = new List<string>();                                 
-                    parameter_id.Add("19");
+                    //List<string> parameter_id = new List<string>();                                 
+                    //parameter_id.Add("19");
 
-                    lobbyCode = generalResponse.lobby.code;
-                    identity_no = PlayerPrefController.Instance.GetIdentityNumber();                                        
+                    //lobbyCode = generalResponse.lobby.code;
+                    //identity_no = PlayerPrefController.Instance.GetIdentityNumber();                                        
 
-                    APIController.Instance.Get("link/get", CallGetLinkAPIResponse, parameter_id);
+                    //APIController.Instance.Get("link/get", CallGetLinkAPIResponse, parameter_id);
+                    //
+                    SceneManager.LoadScene(3);
                 }
                 
             } else {
