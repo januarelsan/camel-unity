@@ -17,6 +17,8 @@ public class FinishedGameController : Singleton<FinishedGameController>
 
     string joinedLobbyId;
 
+    public bool needCheckUser = true;
+
     void Start(){
         joinedLobbyId = PlayerPrefController.Instance.GetLobbyCode();
         // PlayerPrefController.Instance.SetLobbyCode("I1TNR");
@@ -76,7 +78,8 @@ public class FinishedGameController : Singleton<FinishedGameController>
         List<string> parameters = new List<string>() { joinedLobbyId };
         APIController.Instance.Get("lobby/joinedUserList", CallLobbyJoinedUserListAPIResponse, parameters);   
     }
-    
+
+
     void CallLobbyJoinedUserListAPIResponse(Client http)
     {
         allUserOnSameGame = true;
@@ -113,6 +116,8 @@ public class FinishedGameController : Singleton<FinishedGameController>
 
                 if(GetAllUserOnSameGame()){
                     gameFinishedUI.SetActive(false);
+                    // do stop repeating
+                    needCheckUser = false;
                 }
                 
             } else {

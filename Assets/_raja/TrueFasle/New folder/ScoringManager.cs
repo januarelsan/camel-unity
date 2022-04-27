@@ -14,6 +14,7 @@ public class ScoringManager : MonoBehaviour
     public string id;
     public string lobbyCode;
     public bool notDoCheck;
+    public FinishedGameController finishedGameController;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,8 @@ public class ScoringManager : MonoBehaviour
         if (notDoCheck == false) {
             DoCheck();
         }
-
+        finishedGameController = GameObject.FindGameObjectWithTag("UserManager").GetComponent<FinishedGameController>();
+        finishedGameController.needCheckUser = true;
     }
     public void DoCheck() {
         falseUI = transform.GetChild(0).GetComponent<CanvasGroup>();
@@ -78,13 +80,26 @@ public class ScoringManager : MonoBehaviour
             //buttonAct.interactable = true;
             //buttonAct.onClick.AddListener(recievers);
         });
-        //Invoke("DoSecondCheck", .5f);
-        InvokeRepeating("DoSecondCheck", .5f, 3f);
+        Invoke("DoSecondCheck", .5f);
+        //InvokeRepeating("DoSecondCheck", .5f, 3f);
     }
 
     public void DoSecondCheck() { 
         FinishedGameController.Instance.SetupNextGameOnServer();
         FinishedGameController.Instance.CheckAllUserFinished();
+
+        ////
+
+        if (finishedGameController.needCheckUser)
+        {
+            Debug.Log("need check");
+            Invoke("DoSecondCheck", 3f);
+        }
+        else {
+            Debug.Log("no need check");
+            CancelInvoke("DoSecondCheck");
+        }
+
     }
 
 
